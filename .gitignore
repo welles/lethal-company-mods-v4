@@ -11,3 +11,6 @@
 /BepInEx/cache/
 /BepInEx/LogOutput.log
 /BepInEx/mods.json
+
+# Portable Git
+/git/
