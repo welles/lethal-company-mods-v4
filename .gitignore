@@ -8,5 +8,6 @@
 /UnityPlayer.dll
 
 # BepInEx
-/BepInEx/LogOutput.log
 /BepInEx/cache/
+/BepInEx/LogOutput.log
+/BepInEx/mods.json
