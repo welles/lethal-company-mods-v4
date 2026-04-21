@@ -6,3 +6,7 @@
 /NVUnityPlugin.dll
 /UnityCrashHandler64.exe
 /UnityPlayer.dll
+
+# BepInEx
+/BepInEx/LogOutput.log
+/BepInEx/cache/
