@@ -13,7 +13,7 @@ $global:ErrorActionPreference = 'Stop'
 $ProgressPreference = 'Continue'
 $ErrorActionPreference = 'Stop'
 
-$ExecutableName = "Lethal Company"
+$ExecutableName = "Lethal Company."
 $ThunderstoreName = "lethal-company"
 $GitRepositoryName = "lethal-company-mods-v3"
 $SteamGameId = "1966720"
