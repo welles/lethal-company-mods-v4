@@ -1,0 +1,8 @@
+{
+  "author": "Zaggy1024",
+  "name": "OpenBodyCams",
+  "version": "3.0.12",
+  "config_files": [
+    "BepInEx/config/Zaggy1024.OpenBodyCams.cfg"
+  ]
+}
