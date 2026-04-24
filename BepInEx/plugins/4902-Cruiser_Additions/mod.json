@@ -1,0 +1,8 @@
+{
+  "author": "4902",
+  "name": "Cruiser_Additions",
+  "version": "1.4.10",
+  "config_files": [
+    "BepInEx/config/4902.Cruiser_Additions.cfg"
+  ]
+}

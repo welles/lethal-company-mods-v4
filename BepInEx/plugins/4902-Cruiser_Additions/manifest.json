@@ -1,0 +1,9 @@
+{
+	"name": "Cruiser_Additions",
+	"version_number": "1.4.10",
+	"website_url": "https://github.com/4902k/r",
+	"description": "fixed magnet rotation, move scrap to the ship automatically, storage light, mute engine/radio audio in orbit, cruiser scrap items, speedometer,",
+	"dependencies": [
+		"BepInEx-BepInExPack-5.4.2100"
+	]
+}
