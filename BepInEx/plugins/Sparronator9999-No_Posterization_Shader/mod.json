@@ -1,0 +1,8 @@
+{
+  "author": "Sparronator9999",
+  "name": "No_Posterization_Shader",
+  "version": "1.0.0",
+  "config_files": [
+    "BepInEx/config/au.sparronator.lc.noposterization.cfg"
+  ]
+}
