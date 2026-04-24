@@ -1,0 +1,8 @@
+{
+  "author": "Scoops",
+  "name": "LethalPhones",
+  "version": "1.3.23",
+  "config_files": [
+    "BepInEx/config/LethalPhones.cfg"
+  ]
+}
