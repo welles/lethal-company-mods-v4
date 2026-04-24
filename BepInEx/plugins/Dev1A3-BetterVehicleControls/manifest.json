@@ -1,0 +1,12 @@
+{
+  "namespace": "Dev1A3",
+  "name": "BetterVehicleControls",
+  "description": "Improved controls for vehicles.",
+  "version_number": "1.1.8",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100",
+    "Rune580-LethalCompany_InputUtils-0.7.7"
+  ],
+  "website_url": "https://github.com/1A3Dev/LC-BetterVehicleControls/",
+  "FullName": "Dev1A3-BetterVehicleControls"
+}
