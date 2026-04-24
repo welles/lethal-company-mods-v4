@@ -145,7 +145,7 @@ Write-Host "### " -ForegroundColor Cyan -NoNewline
 Write-Host "Lade Daten vom Repository-Server..."
 
 $Host.UI.RawUI.ForegroundColor = "DarkGray"
-Invoke-Utility "$BaseDirectory\git\bin\git.exe" fetch --all --tags
+Invoke-Utility "$BaseDirectory\git\bin\git.exe" fetch --depth 1 origin main --tags
 $Host.UI.RawUI.ForegroundColor = $OriginalColor
 
 Write-Host "### " -ForegroundColor Cyan -NoNewline
