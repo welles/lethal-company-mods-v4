@@ -1,0 +1,8 @@
+{
+  "author": "ScienceBird",
+  "name": "Universal_Radar",
+  "version": "1.2.4",
+  "config_files": [
+    "BepInEx/config/ScienceBird.UniversalRadar.cfg"
+  ]
+}

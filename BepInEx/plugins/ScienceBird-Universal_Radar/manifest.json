@@ -1,0 +1,10 @@
+{
+    "name": "Universal_Radar",
+    "version_number": "1.2.4",
+    "website_url": "https://github.com/Science-Bird/UniversalRadar",
+    "description": "Improved, dynamic, and configurable contour maps (and more) for every moon.",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2305",
+        "v0xx-TerraMesh-1.2.0"
+    ]
+}
