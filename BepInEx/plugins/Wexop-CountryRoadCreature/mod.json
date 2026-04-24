@@ -1,0 +1,8 @@
+{
+  "author": "Wexop",
+  "name": "CountryRoadCreature",
+  "version": "1.0.9",
+  "config_files": [
+    "BepInEx/config/wexop.country_road_creature.cfg"
+  ]
+}
