@@ -102,7 +102,6 @@ Write-Host "[OK: $($NewestVersion.Version_Number)]" -ForegroundColor Green
 $IsUpdate = $false
 
 $ConfigFiles = @()
-$LfsFiles = @()
 
 if (Test-Path "$PluginsDir\$FileName")
 {
@@ -137,10 +136,6 @@ if (Test-Path "$PluginsDir\$FileName")
                 Write-Host "[Not Found]" -ForegroundColor Yellow
             }
         }
-    }
-
-    if ($ModInfoExists -and $ModInfo.LfsFiles) {
-        $LfsFiles = $ModInfo.LfsFiles
     }
 
     $IsUpdate = $true
@@ -369,57 +364,6 @@ $ConfigFiles | ForEach-Object { Write-Host "- $_" }
 
 #endregion CONFIG FILES
 
-#region LFS FILES
-
-Write-Host "LFS Files:"
-$LfsFiles | ForEach-Object { Write-Host "- $_" }
-
-while ($true)
-{
-    $InputPath = Read-Host "Enter path to LFS file (or 'q' to quit)"
-
-    if ([string]::IsNullOrWhiteSpace($InputPath))
-    {
-        continue
-    }
-    elseif ($InputPath -eq 'q')
-    {
-        break
-    }
-    elseif (Test-Path "$BaseDir\$InputPath")
-    {
-        $LfsFiles += $InputPath
-    }
-    else
-    {
-        Write-Host "Path does not exist: $InputPath" -ForegroundColor Red
-    }
-}
-
-$LfsFiles = $LfsFiles | Select-Object -Unique
-
-Write-Host "LFS Files:"
-$LfsFiles | ForEach-Object { Write-Host "- $_" }
-
-if ($LfsFiles.Length -gt 0) {
-    Write-Host "Writing LFS git attributes to files... " -NoNewline
-
-    foreach ($LfsFile in $LfsFiles) {
-        $LfsFilePath = "$BaseDir\$LfsFile"
-
-        $LfsDirectory = (Get-Item $LfsFilePath).Directory.FullName
-        $LfsName = (Get-Item $LfsFilePath).Name
-
-        $GitAttributesPath = "$LfsDirectory\.gitattributes"
-
-        Add-Content -Path $GitAttributesPath -Value "$LfsName filter=lfs diff=lfs merge=lfs -text"
-    }
-
-    Write-Host "[OK]" -ForegroundColor Green
-}
-
-#endregion LFS FILES
-
 Write-Host "Writing mod info to file... " -NoNewline
 
 $ModInfo = [ordered] @{
@@ -431,11 +375,6 @@ $ModInfo = [ordered] @{
 if ($ConfigFiles.Length -gt 0)
 {
     $ModInfo.ConfigFiles = $ConfigFiles
-}
-
-if ($LfsFiles.Length -gt 0)
-{
-    $ModInfo.LfsFiles = $LfsFiles
 }
 
 Set-Content "$PluginsDir\$FileName\mod.json" -Value (ConvertTo-Json $ModInfo)
