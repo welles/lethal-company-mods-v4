@@ -1,0 +1,8 @@
+{
+  "author": "LethalCompanyModding",
+  "name": "RuntimeIcons",
+  "version": "0.3.3",
+  "config_files": [
+    "BepInEx/config/com.github.lethalcompanymodding.runtimeicons.cfg"
+  ]
+}
