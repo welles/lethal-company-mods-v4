@@ -336,6 +336,22 @@ else
 Write-Host "Config Files:"
 $ConfigFiles | ForEach-Object { Write-Host "- $_" }
 
+$UntrackedConfigs = git ls-files --others --exclude-standard BepInEx/config
+
+if ($UntrackedConfigs)
+{
+    Write-Host "`nDetected new/untracked config files:" -ForegroundColor Cyan
+    foreach ($File in $UntrackedConfigs)
+    {
+        $Confirmation = Read-Host "Add '$File'? (y/n)"
+        if ($Confirmation -eq 'y')
+        {
+            $ConfigFiles += $File
+        }
+    }
+    Write-Host ""
+}
+
 while ($true)
 {
     $InputPath = Read-Host "Enter path to config file (or 'q' to quit)"
