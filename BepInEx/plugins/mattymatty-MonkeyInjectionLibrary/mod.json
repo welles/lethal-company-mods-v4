@@ -1,0 +1,9 @@
+{
+  "author": "mattymatty",
+  "name": "MonkeyInjectionLibrary",
+  "version": "1.0.2",
+  "config_files": [
+    "BepInEx/config/MonkeyInjectionLibrary.cfg",
+    "BepInEx/patchers/mattymatty-MonkeyInjectionLibrary/MonkeyInjectionLibrary.Development.cfg"
+  ]
+}
