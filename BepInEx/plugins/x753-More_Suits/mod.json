@@ -1,0 +1,8 @@
+{
+  "author": "x753",
+  "name": "More_Suits",
+  "version": "1.5.2",
+  "config_files": [
+    "BepInEx/config/x753.More_Suits.cfg"
+  ]
+}
