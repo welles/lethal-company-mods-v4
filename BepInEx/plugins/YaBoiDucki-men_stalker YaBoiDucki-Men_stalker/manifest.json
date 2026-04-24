@@ -1,0 +1,11 @@
+{
+    "name": "men_stalker",
+    "version_number": "3.1.2",
+    "website_url": "",
+    "description": "add a new dungeon monster who heavily rely on prolonged stalking phase and explosive chase phase",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100",
+    "Evaisa-HookGenPatcher-0.0.5",
+    "Evaisa-LethalLib-0.16.1"
+  ]
+}

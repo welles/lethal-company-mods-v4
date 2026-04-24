@@ -1,0 +1,14 @@
+{
+  "author": [
+    "YaBoiDucki",
+    "YaBoiDucki"
+  ],
+  "name": [
+    "men_stalker",
+    "Men_stalker"
+  ],
+  "version": "3.1.2",
+  "config_files": [
+    "BepInEx/config/snickerbarYaboiDucki.menstalker_yaboiduckisnickerbar.cfg"
+  ]
+}
