@@ -1,0 +1,8 @@
+{
+  "author": "FlipMods",
+  "name": "TooManyEmotes",
+  "version": "2.3.15",
+  "config_files": [
+    "BepInEx/config/FlipMods.TooManyEmotes.cfg"
+  ]
+}
