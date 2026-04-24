@@ -1,0 +1,9 @@
+{
+    "name": "TerraMesh",
+    "version_number": "1.2.0",
+    "website_url": "https://discord.com/channels/1168655651455639582/1303914349533990983",
+    "description": "An API for terrain to mesh conversion and mesh manipulation",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100"
+    ]
+}
