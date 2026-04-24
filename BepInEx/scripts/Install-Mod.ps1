@@ -99,6 +99,63 @@ $FileName = $ModMetrics.Full_Name
 
 Write-Host "[OK: $($NewestVersion.Version_Number)]" -ForegroundColor Green
 
+#region DEPENDENCY CHECK
+
+$DependenciesWithoutBepInEx = [System.Collections.ArrayList]@()
+
+foreach ($Dependency in $NewestVersion.dependencies)
+{
+    $DependencyAuthor = ($Dependency -split "-")[0]
+    $DependencyName = ($Dependency -split "-")[1]
+    $DependencyVersion = ($Dependency -split "-")[2]
+
+    if ($DependencyAuthor -ne "BepInEx" -and $DependencyName -ne "BepInExPack")
+    {
+        $DependenyManifest =
+        @{
+            Author  = $DependencyAuthor
+            Name    = $DependencyName
+            Version = $DependencyVersion
+        }
+
+        $DependenciesWithoutBepInEx.Add($DependenyManifest) | Out-Null
+    }
+}
+
+if ($DependenciesWithoutBepInEx.Length -gt 0)
+{
+    $ModFiles = Get-ChildItem "$PluginsDir\*\mod.json", "$PatchersDir\*\mod.json" | ForEach-Object { ConvertFrom-Json (Get-Content $_ -Raw) }
+
+    $MissingDependencies = $false
+    Write-Host "This mod has dependencies:" -ForegroundColor Yellow
+
+    foreach ($Dependency in $DependenciesWithoutBepInEx)
+    {
+        if (($ModFiles | Where-Object { $_.author -eq $Dependency.Author -and $_.name -eq $Dependency.Name } | Measure-Object).Count -eq 1)
+        {
+            Write-Host "$($Dependency.Author) - $($Dependency.Name) - $($Dependency.Version)" -ForegroundColor Green
+        }
+        else
+        {
+            Write-Host "MISSING DEPENDENCY: $($Dependency.Author) - $($Dependency.Name) - $($Dependency.Version)" -ForegroundColor Red
+
+            $MissingDependencies = $true
+        }
+    }
+
+    if ($MissingDependencies)
+    {
+        $ContinueWithoutDependencies = Read-Host "There are missing dependencies! Continue anyway? (y/n)"
+
+        if ($ContinueWithoutDependencies -ne "y")
+        {
+            exit
+        }
+    }
+}
+
+#endregion DEPENDENCY CHECK
+
 $IsUpdate = $false
 
 $ConfigFiles = @()
@@ -234,67 +291,6 @@ if (Test-Path "$PluginsDir\$FileName\plugins")
     Remove-Item "$PluginsDir\$FileName\plugins"
 
     Write-Host "[OK]" -ForegroundColor Green
-}
-
-Write-Host "Checking mod manifest... " -NoNewline
-
-$ModManifest = ConvertFrom-Json (Get-Content "$PluginsDir\$FileName\manifest.json" -Raw)
-
-$DependenciesWithoutBepInEx = [System.Collections.ArrayList]@()
-
-foreach ($Dependency in $ModManifest.Dependencies)
-{
-    $DependencyAuthor = ($Dependency -split "-")[0]
-    $DependencyName = ($Dependency -split "-")[1]
-    $DependencyVersion = ($Dependency -split "-")[2]
-
-    if ($DependencyAuthor -ne "BepInEx" -and $DependencyName -ne "BepInExPack")
-    {
-        $DependenyManifest =
-        @{
-            Author  = $DependencyAuthor
-            Name    = $DependencyName
-            Version = $DependencyVersion
-        }
-
-        $DependenciesWithoutBepInEx.Add($DependenyManifest) | Out-Null
-    }
-}
-
-Write-Host "[OK]" -ForegroundColor Green
-
-$MissingDependencies = $false
-
-if ($DependenciesWithoutBepInEx.Length -gt 0)
-{
-    $ModFiles = Get-ChildItem "$PluginsDir\*\mod.json", "$PatchersDir\*\mod.json" | ForEach-Object { ConvertFrom-Json (Get-Content $_ -Raw) }
-
-    Write-Host "This mod has dependencies:" -ForegroundColor Yellow
-
-    foreach ($Dependency in $DependenciesWithoutBepInEx)
-    {
-
-        if (($ModFiles | Where-Object { ($_.Author -eq $Dependency.Author -or $_.author -eq $Dependency.Author) -and ($_.Name -eq $Dependency.Name -or $_.name -eq $Dependency.Name) } | Measure-Object).Count -eq 1)
-        {
-            Write-Host "$($Dependency.Author) - $($Dependency.Name) - $($Dependency.Version)" -ForegroundColor Green
-        }
-        else
-        {
-            Write-Host "MISSING DEPENDENCY: $($Dependency.Author) - $($Dependency.Name) - $($Dependency.Version)" -ForegroundColor Red
-
-            $MissingDependencies = $true
-        }
-    }
-}
-
-if ($MissingDependencies)
-{
-    $ContinueWithoutDependencies = Read-Host "There are missing dependencies! Continue anyway? (y/n)"
-
-    if ($ContinueWithoutDependencies -ne "y")
-    {
-        return
-    }
 }
 
 Write-Host "Starting game... " -NoNewline
