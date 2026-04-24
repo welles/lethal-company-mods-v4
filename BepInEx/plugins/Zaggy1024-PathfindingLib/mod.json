@@ -1,0 +1,8 @@
+{
+  "author": "Zaggy1024",
+  "name": "PathfindingLib",
+  "version": "2.4.1",
+  "config_files": [
+    "BepInEx/config/Zaggy1024.PathfindingLib.cfg"
+  ]
+}
