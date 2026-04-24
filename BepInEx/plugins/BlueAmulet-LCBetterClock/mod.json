@@ -1,0 +1,8 @@
+{
+  "author": "BlueAmulet",
+  "name": "LCBetterClock",
+  "version": "1.0.4",
+  "config_files": [
+    "BepInEx/config/BlueAmulet.BetterClock.cfg"
+  ]
+}
