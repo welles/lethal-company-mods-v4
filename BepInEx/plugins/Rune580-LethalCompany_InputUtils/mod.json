@@ -1,0 +1,8 @@
+{
+  "author": "Rune580",
+  "name": "LethalCompany_InputUtils",
+  "version": "0.7.13",
+  "config_files": [
+    "BepInEx/config/com.rune580.LethalCompanyInputUtils.cfg"
+  ]
+}
