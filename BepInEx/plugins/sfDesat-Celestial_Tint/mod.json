@@ -1,0 +1,8 @@
+{
+  "author": "sfDesat",
+  "name": "Celestial_Tint",
+  "version": "1.5.2",
+  "config_files": [
+    "BepInEx/config/CelestialTint.cfg"
+  ]
+}
