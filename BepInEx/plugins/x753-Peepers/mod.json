@@ -1,0 +1,8 @@
+{
+  "author": "x753",
+  "name": "Peepers",
+  "version": "1.0.5",
+  "config_files": [
+    "BepInEx/config/x753.Peepers.cfg"
+  ]
+}
