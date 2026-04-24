@@ -1,6 +1,8 @@
 {
-  "Author": "x753",
-  "Name": "Mimics",
-  "Version": "2.7.4",
-  "ConfigFiles": "BepInEx/config/x753.Mimics.cfg"
+  "author": "x753",
+  "name": "Mimics",
+  "version": "2.7.4",
+  "config_files": [
+    "BepInEx/config/x753.Mimics.cfg"
+  ]
 }

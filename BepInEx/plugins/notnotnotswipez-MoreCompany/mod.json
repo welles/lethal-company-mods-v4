@@ -1,6 +1,8 @@
 {
-  "Author": "notnotnotswipez",
-  "Name": "MoreCompany",
-  "Version": "1.13.3",
-  "ConfigFiles": "BepInEx/config/me.swipez.melonloader.morecompany.cfg"
+  "author": "notnotnotswipez",
+  "name": "MoreCompany",
+  "version": "1.13.3",
+  "config_files": [
+    "BepInEx/config/me.swipez.melonloader.morecompany.cfg"
+  ]
 }
