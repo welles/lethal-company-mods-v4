@@ -1,0 +1,8 @@
+{
+  "author": "TestAccount666",
+  "name": "ShipWindows",
+  "version": "2.9.0",
+  "config_files": [
+    "BepInEx/config/TestAccount666.ShipWindows.cfg"
+  ]
+}

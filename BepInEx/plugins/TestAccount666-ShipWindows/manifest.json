@@ -1,0 +1,13 @@
+{
+    "name": "ShipWindows",
+    "version_number": "2.9.0",
+    "website_url": "https://github.com/Test-Account666/LethalCompany-ShipWindows/",
+    "description": "Adds glass windows to the ship so you can see what's going on outside.",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100",
+        "MaxWasUnavailable-LethalModDataLib-1.2.2",
+        "WhiteSpike-Interactive_Terminal_API-1.2.0",
+        "TestAccount666-TestAccountCore-1.16.0",
+        "TeamXiaolan-DawnLib-0.6.0"
+    ]
+}
