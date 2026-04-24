@@ -1,0 +1,8 @@
+{
+  "author": "ShaosilGaming",
+  "name": "GeneralImprovements",
+  "version": "1.5.5",
+  "config_files": [
+    "BepInEx/config/ShaosilGaming.GeneralImprovements.cfg"
+  ]
+}
