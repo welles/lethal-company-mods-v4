@@ -1,0 +1,8 @@
+{
+  "author": "JacobG5",
+  "name": "JLL",
+  "version": "1.10.0",
+  "config_files": [
+    "BepInEx/config/JacobG5.JLL.cfg"
+  ]
+}
