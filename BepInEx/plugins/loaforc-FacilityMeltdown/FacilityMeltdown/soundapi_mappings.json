@@ -1,0 +1,11 @@
+{
+  "FacilityMeltdown:music": [
+    "MeltdownHandler:MeltdownMusic:meltdownMusic"
+  ],
+  "FacilityMeltdown:warning_voice": [
+    "MeltdownHandler:WarningVoice:warning1",
+    "MeltdownHandler:WarningVoice:warning2",
+    "MeltdownHandler:WarningVoice:warning3",
+    "MeltdownHandler:WarningVoice:warning4"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "author": "loaforc",
+  "name": "FacilityMeltdown",
+  "version": "2.7.4",
+  "config_files": [
+    "BepInEx/config/me.loaforc.facilitymeltdown.Client.cfg",
+    "BepInEx/config/me.loaforc.facilitymeltdown.cfg"
+  ]
+}
