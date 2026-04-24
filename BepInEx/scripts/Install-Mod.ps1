@@ -118,9 +118,9 @@ if (Test-Path "$PluginsDir\$FileName")
 
     Write-Host "[OK]" -ForegroundColor Green
 
-    if ($ModInfoExists -and $ModInfo.ConfigFiles)
+    if ($ModInfoExists -and $ModInfo.config_files)
     {
-        $ConfigFiles = $ModInfo.ConfigFiles
+        $ConfigFiles = @($ModInfo.config_files)
 
         $ConfigFiles | ForEach-Object {
             Write-Host "Deleting config file $_ "  -NoNewline -ForegroundColor Yellow
@@ -274,7 +274,7 @@ if ($DependenciesWithoutBepInEx.Length -gt 0)
     foreach ($Dependency in $DependenciesWithoutBepInEx)
     {
 
-        if (($ModFiles | Where-Object { $_.Author -eq $Dependency.Author -and $_.Name -eq $Dependency.Name } | Measure-Object).Count -eq 1)
+        if (($ModFiles | Where-Object { ($_.Author -eq $Dependency.Author -or $_.author -eq $Dependency.Author) -and ($_.Name -eq $Dependency.Name -or $_.name -eq $Dependency.Name) } | Measure-Object).Count -eq 1)
         {
             Write-Host "$($Dependency.Author) - $($Dependency.Name) - $($Dependency.Version)" -ForegroundColor Green
         }
@@ -367,14 +367,10 @@ $ConfigFiles | ForEach-Object { Write-Host "- $_" }
 Write-Host "Writing mod info to file... " -NoNewline
 
 $ModInfo = [ordered] @{
-    Author  = $ModMetrics.Owner
-    Name    = $ModMetrics.Name
-    Version = $NewestVersion.Version_Number
-}
-
-if ($ConfigFiles.Length -gt 0)
-{
-    $ModInfo.ConfigFiles = $ConfigFiles
+    author       = $ModMetrics.Owner
+    name         = $ModMetrics.Name
+    version      = $NewestVersion.Version_Number
+    config_files = @($ConfigFiles)
 }
 
 Set-Content "$PluginsDir\$FileName\mod.json" -Value (ConvertTo-Json $ModInfo)
