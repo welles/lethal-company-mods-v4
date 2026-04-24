@@ -12,5 +12,8 @@
 /BepInEx/LogOutput.log
 /BepInEx/mods.json
 
+# AutoHookGenPatcher MMHOOK
+/BepInEx/plugins/MMHOOK/
+
 # Portable Git
 /git/
