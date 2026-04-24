@@ -1,0 +1,8 @@
+{
+  "author": "malco",
+  "name": "Lategame_Upgrades",
+  "version": "3.13.1",
+  "config_files": [
+    "BepInEx/config/com.malco.lethalcompany.moreshipupgrades.cfg"
+  ]
+}
