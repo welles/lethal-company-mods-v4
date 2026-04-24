@@ -1,0 +1,8 @@
+{
+  "author": "Hamunii",
+  "name": "AutoHookGenPatcher",
+  "version": "1.0.9",
+  "config_files": [
+    "BepInEx/config/AutoHookGenPatcher.cfg"
+  ]
+}
