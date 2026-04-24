@@ -1,0 +1,8 @@
+{
+  "author": "IAmBatby",
+  "name": "LethalLevelLoader",
+  "version": "1.6.9",
+  "config_files": [
+    "BepInEx/config/LethalLevelLoader.cfg"
+  ]
+}
