@@ -1,0 +1,11 @@
+{
+    "name": "CudisRealisticSuits",
+    "author": "kidcudiambassador",
+    "version_number": "1.0.0",
+    "website_url": "",
+    "description": "Organize your team with realistic suits that fit into the world of Lethal Company. Requires More Suits",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100",
+        "x753-More_Suits-1.3.0"
+    ]
+}
