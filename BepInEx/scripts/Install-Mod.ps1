@@ -55,6 +55,9 @@ $ModList = ConvertFrom-Json (Get-Content $ModListPath -Raw)
 
 $ModMetrics = $ModList | Where-Object { $_.Name -eq $Mod -and $_.Owner -eq $Author }
 
+# Free memory by clearing the massive master list
+$ModList = $null
+
 if ($null -eq $ModMetrics)
 {
     Write-Host "[Error]" -ForegroundColor Red
@@ -142,6 +145,8 @@ if ($DependenciesWithoutBepInEx.Length -gt 0)
             $MissingDependencies = $true
         }
     }
+
+    $ModFiles = $null
 
     if ($MissingDependencies)
     {
