@@ -1,8 +1,0 @@
-{
-  "author": "Evaisa",
-  "name": "HookGenPatcher",
-  "version": "0.0.5",
-  "config_files": [
-    "BepInEx/config/HookGenPatcher.cfg"
-  ]
-}
