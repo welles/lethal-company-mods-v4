@@ -1,0 +1,9 @@
+{
+  "author": "Beaniebe",
+  "name": "Beanies_Moons",
+  "version": "1.2.9",
+  "config_files": [
+    "BepInEx/config/LethalLevelLoader.cfg",
+    "BepInEx/config/ScienceBird.UniversalRadar.cfg"
+  ]
+}
