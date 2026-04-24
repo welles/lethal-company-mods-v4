@@ -1,0 +1,8 @@
+{
+  "author": "zealsprince",
+  "name": "Locker",
+  "version": "1.6.3",
+  "config_files": [
+    "BepInEx/config/com.zealsprince.locker.cfg"
+  ]
+}
