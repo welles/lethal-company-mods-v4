@@ -1,0 +1,9 @@
+{
+  "author": "Generic_GMD",
+  "name": "Generic_Interiors",
+  "version": "4.1.1",
+  "config_files": [
+    "BepInEx/config/JLL/Genericgmd.GenericInteriors.cfg",
+    "BepInEx/config/LethalLevelLoader.cfg"
+  ]
+}
