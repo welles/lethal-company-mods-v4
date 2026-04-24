@@ -169,12 +169,5 @@ Invoke-Utility "$BaseDirectory\git\bin\git.exe" clean -df
 $Host.UI.RawUI.ForegroundColor = $OriginalColor
 
 Write-Host "### " -ForegroundColor Cyan -NoNewline
-Write-Host "Bereinige veraltete Dateien..."
-
-$Host.UI.RawUI.ForegroundColor = "DarkGray"
-Invoke-Utility "$BaseDirectory\git\bin\git.exe" lfs prune --verify-remote
-$Host.UI.RawUI.ForegroundColor = $OriginalColor
-
-Write-Host "### " -ForegroundColor Cyan -NoNewline
 Write-Host "Fertig! Das Spiel kann gestartet werden!" -ForegroundColor Green
 
