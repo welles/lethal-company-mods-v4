@@ -15,5 +15,8 @@
 # AutoHookGenPatcher MMHOOK
 /BepInEx/plugins/MMHOOK/
 
+# Imperium
+/BepInEx/config/giosuel.Imperium.cfg
+
 # Portable Git
 /git/

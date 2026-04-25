@@ -1,0 +1,626 @@
+# Changelog
+
+## Imperium v1.3.0 - Regular Update
+
+This update tackles a number of long-standing bugs alongside several frequently requested features. The biggest change under the hood is a rework of the object explorer's multiplayer functionality, which is now far more robust against desync and network latency: updates are only sent when objects actually change, the explorer refreshes periodically to stay in sync, and RPCs are more consistently routed through the host for better access control.
+
+Modded outdoor and indoor hazards added by LLL and DawnLib are now fully supported as well, so network-aware modded hazards will work out of the box. Oracle has also been updated to correctly predict entities in v81.
+
+### General Changes
+
+- Reworked the map obstacle section in the moon control window.
+- Added a button to flicker the lights.
+- Added a button to remove the slippery surfaces / gunk from the stingray.
+- Added an option to disable culling in the rendering window.
+- Added an optiont to disable the new indoor fog in the rendering window.
+- Updated oracle to correctly predict entities in v81.
+- Removed permadrunk functionality from the control center.
+- Added button to enable noclip while flying to the control center.
+- Added support for modded outside hazards with network objects.
+
+### Bug Fixes
+
+- Fixed a bug that made it so locking doors toggled the lock instead.
+- Teleporting a player now applies the correct audio reverb preset.
+- The apparatus teleport button now correctly targets an apparatus inside the facility.
+- Fixed a bug that caused Imperium's lock blocks to misalign sometimes.
+- Fixed a bug that caused speedy shovel to not work anymore.
+- Fixed outdated information about indoor map hazards in the info window.
+- Fixed a bug that made spider webs impossible to teleport or destroy in the object explorer.
+- Spider webs are now cleaned up properly when a spider is destroyed in the object explorer.
+- Fixed a bug that made it possible for the resolution slider to go below 0.
+- Fixed a bug that caused the game's resolution to ignore the resolution slider in the object explorer.
+- Fixed object explorer related bugs that prevented certain items from being toggled or toggle desync in general.
+- Fixed a bug that caused brackens to break when spawned indoors.
+- Fixed Infinite Battery causing the weed killer to fill up the cruiser slower.
+- Despawning a bee hive now also despawns the bees the hive belongs to.
+
+### QoL Improvements
+
+- Added terminal codes to landmines, turrets and security doors in the object explorer.
+- Made it so the position / teleport indicator points exactly to the screen center.
+- The object explorer is now updating periodically to account for desync and network latency.
+- The object manager now only sends object updates when objects have actually changed.
+- Removed the respawn button for spider webs as it didn't do anything.
+- Object RPCs are now more consistently routed through the host, improving access control.
+- Renamed "Full Auto" shotgun option to "No Cooldown".
+
+### Compatibility
+
+This version is compatible with [v81](https://steamdb.info/changelist/35045101/) of Lethal Company.
+
+## Imperium v1.2.3 - Hotfix
+
+### Bug Fixes
+
+- Fixed a bug that caused outdated configs to break Imperium startup.
+
+## Imperium v1.2.2 - Small Update
+
+### General Changes
+- Added support for story logs in the object explorer.
+- Added an option to disable the flipped camera effect on 1st of April.
+- Added buttons to unlock all bestiary and story logs.
+- Added an identifier to steam lobbies when Imperium is running.
+- Added support for modded indoor map hazards in the spawning UI.
+
+### QoL Improvements
+
+- Added a check that disables flight when the player hits the ground.
+
+### Bug Fixes
+
+- Moved some field initializers to init functions to make Imperium work with development builds.
+- Fixed a bug that caused manually spawned outside objects to persist after leaving a moon.
+- Fixed a bug that caused the minimap settings window to break when opened.
+
+## Imperium v1.2.1 - Small Update
+
+### General Changes
+
+- Oracle is correctly predicting enemies again.
+- Added support for modded vehicles in the spawning UI and object explorer.
+- Made it so pausing time persists after restarting the game.
+
+### QoL Improvements
+
+- Improved usability of the Oracle UI and removed coordinates.
+- Moved all visualizer objects into Imperium parent objects.
+- Destroying a cruiser in the object explorer now makes it explode.
+- Made it so the time indicator icon is replaced with a lock when time is paused.
+- Removed various internal log statements.
+
+### Bug Fixes
+
+- Fixed a bug that caused a destroyed cruiser to leave colliders behind.
+- Fixed a bug that caused naturally spawned cruisers to be invisible.
+
+### Compatibility
+
+This version is compatible with the [v80](https://steamdb.info/changelist/34734266/) public beta of Lethal Company.
+
+## Imperium v1.2.0 - v80 Update
+
+This update brings compatibility with the Lethal Company v80 public beta, along with several long-standing bug fixes.
+
+Note: *Due to a lot of changes in the entity spawning, Oracle entity spawn prediction is currently broken.*
+
+### General Changes
+
+- Imperium now works with Lethal Company v80.
+- Re-added functionality to spawn, despawn and manage vain shrouds.
+- Added functionality to spawn cadaver blooms and cadaver growths.
+- Due to long-standing issues, the save file editor has been removed.
+
+### Bug Fixes
+
+- Fixed a problem that caused log spam from tooltips.
+- Fixed a bug that caused insights to be invisible in the visualization window.
+- Fixed an issue that caused the game to crash when Imperium was used with some content changing mods.
+
+### QoL Improvements
+- Improved responsiveness of the object explorer.
+- Added name overrides for several items and entities in the spawn menu.
+
+### Compatibility
+
+This version is compatible with the [v80](https://steamdb.info/changelist/34734266/) public beta of Lethal Company.
+
+## Imperium v1.1.0 - Bug Fixes
+
+### Bug Fixes
+
+- Fixed a bug that made Imperium crash when some mods are adding outside objects without a prefab.
+
+## Imperium v1.0.0 - The Release
+
+> We've come a long way since the release of the first Imperium prototype in early April 2024 to where we are today. Imperium was my first modding project for any game and it was just meant to be a fun little tool to explore the wonderful mechanics of this amazing game.
+>
+> But thanks to the continuous support from so many of you loyal employees, mod devs and content creators, which were eagerly providing feedback and feature ideas, I was able to expand this initial idea into this fully fledged debugging swiss-army knife for Lethal Company!
+>
+> I think Imperium is now finally in a stable state where most of the community's and my ideas are implemented and the majority of the P1 and P2 bugs are resolved. And while this definitely isn't the end of Imperium support, I do plan on moving on to different modding / game dev projects as well as [Imperium for R.E.P.O](https://github.com/giosuel/imperium-repo) in the future.
+>
+> ~The Emperor, gio
+
+The Imperium release is mostly aimed at fixing all the remaining P1 and P2 bugs as well as implementing the last few features that I had on my list for such a long time now, such as the time slider and the dungeon flow override. I also spent some time polishing the UI and improving the overall usability of Imperium. This includes interface animations and transitions, smoother loading as well as improved global tooltips.
+
+### General Changes
+
+- Removed support for vain shrouds since they are no longer used in the base game.
+- Rewrote Quickload logic and cleaned up preferences.
+- Player untargetability / invisiblity is now communicated to all clients to prevent de-sync.
+- Made it so spawned entities are added to the game's spawned enemy list.
+
+### Added Stuff
+
+- Added a collider visualizer for objects on the LineOfSight layer.
+- Added and updated various tooltips to increase the overall UI usability.
+- Added a slam type toggle for spike traps in the object explorer.
+
+### Bug Fixes
+
+- Moved all network logging to the DEBUG level to decrease log volume.
+- Fixed an issue where faulty UI config would break the Imperium startup sequence.
+- Made it so entities without prefabs are not showing up in the spawn menu.
+- Made it so the map camera's near and far clip can't overlap anymore.
+- Fixed notification settings not applying without restarting.
+- Fixed a bug that caused the UI reload button to not work.
+- Removed the Optimize Logs settings and removed log deletions.
+- Fixed a bug that prevented local objects from being able to be deleted.
+- Fixed a bug that made it very glitchy to enter coordinates in the teleport window.
+
+### API Changes
+
+- Removed all vain shroud related endpoints.
+
+### QoL Improvements
+
+- Improved tooltip experience with new smooth transitions and delays.
+- Made it so tooltips can no longer extend past the screen.
+- Various UI layout fixes and adjustments to improve usability.
+- Made UI sounds more consistent and toggleable.
+- Increased shown items in spawn UI from 6 to 8.
+- Made it so windows won't disappear when resizing the game window.
+- Fixed a bug where changing the FoV would result in weird camera behaviour.
+- Made it so teleport coordinates will automatically update if the player teleports out-of-bounds.
+- Removed the min and max constraints on teleport coordinates.
+- Added a soft dependency for LLL to retrieve custom dungeon flow display names.
+- Made it so the hover tooltip is disabled when the HUD is hidden.
+
+### Compatibility
+
+This version is compatible with the [v70](https://steamdb.info/changelist/29307618/) update of Lethal Company.
+
+## Imperium v0.2.8 [Beta] - V66 Compatibility Patch
+
+**Note:** *This version of Imperium is compatible with the [Version 66](<https://steamdb.info/changelist/25889392/>) of Lethal Company.*
+
+### Added Stuff
+
+- Added new visualizers for the Maneater.
+- Added new visualizers for the Flowerman.
+- Added a switch to turn off the 69% sales easter egg.
+- Added an option to fullscreen the minicam (`Default: F11`).
+
+### API Changes
+
+- Added more entity visualizer functions and wrote more documentation.
+
+### Internal Fixes
+
+- Fixed a bug where frame setting overrides were always being overridden.
+- Fixed a bug where frame settings were affecting inactive cameras.
+- Fixed a bug where Oracle was re-simulating when it wasn't required to.
+- Fixed a bug where instant landing and takeoff sometimes wouldn't work.
+- Reverted a change that made Oracle unstable.
+- Updated oracle to take rush index into account ([Info](<https://lethal-company.fandom.com/wiki/Version_65>)).
+- Fixed a bug where keybinds weren't unsubscribing properly when restarting a game.
+
+## Imperium v0.2.7 [Beta] - V64 Compatibility Patch
+
+**Note:** *This version of Imperium is compatible with the [Version 64 (Beta)](<https://steamdb.info/changelist/25039181/>) and [Version 62](https://steamdb.info/changelist/24877906/) of Lethal Company.*
+
+- Fixed a bug where the player was always targetable when untargetabillity was turned off.
+- Removed weed entity spawn prediction from Oracle.
+- Fixed a bug where items weren't properly updated when the player teleported.
+
+## Imperium v0.2.6 [Beta] - Hotfix
+
+- Fixed a bug where the infinite turbo option was always enabled for the company cruiser.
+
+## Imperium v0.2.5 [Beta] - Hotfix
+
+- Fixed a bug where the interior would always be the Mineshaft for the host.
+- Fixed a bug where the freecam would break spectating.
+
+## Imperium v0.2.4 [Beta] - Bug Fixes
+
+### Internal Fixes
+
+- Fixed a bug where duplicate outside hazards would prevent Imperium from spawning.
+- Fixed a bug where the theme wouldn't apply correctly to the freecam sliders.
+- Fixed a bug where visualizers would sometimes fail to find an entity.
+- Added integration for [WeatherRegistry](https://thunderstore.io/c/lethal-company/p/mrov/WeatherRegistry/).
+- Changed some theme settings to make colors more consistent across UIs.
+- Fixed a bug where respawning entities would not work.
+- Various performance tweaks to the object explorer window.
+- Fixed some performance issues with Oracle.
+
+## Imperium v0.2.3 [Beta] - Bug Fixes
+
+### Internal Fixes
+
+- Fixed a bug where opening the UI while being moved by the game would crash the game.
+- Fixed a bug where despawning the cruiser would break the game for the driver.
+- Fixed a bug where incorrect parsing of some input fields would break Imperium startup.
+- Fixed a bug where opening the teleport window would teleport you in place.
+
+## Imperium v0.2.2 [Beta] - The Event Log
+
+Besides a load of QoL changes, bug fixes and compatibility changes, this update is aimed at the implementation of the event log and the tape measure. The event log is a tool that allows you to track in-game events such as entity behaviour, targeting and noise detection more easily.
+
+Another change is that Imperium is now usable even if not everyone in the lobby has it installed. There is currently no desync guarding, meaning it is possible to cause desync issues when clients don't have it installed, so use with caution! I will be working on automatically deactivating certain functionality based on the lobby to avoid these issues in the future.
+
+**Note:** *This version of Imperium is compatible with the [Version 60](<https://steamdb.info/changelist/24827461/>) of Lethal Company.*
+
+### Highlights
+
+#### Event Log
+
+The event log allows you to track specific game events such as entity spawns, noise detection, entity targeting and LoS detection and more.
+
+![event-log](https://github.com/giosuel/imperium/blob/main/assets/event-log.png?raw=true)
+
+#### Tape Measure
+
+The tape measure is a virtual tool to measure distances in the game. The tape measure supports axis snapping when holding down the `Alt` key. It also tries to snap to surfaces as well as possible.
+
+![tape-measure](https://github.com/giosuel/imperium/blob/main/assets/tape-measure.png?raw=true)
+
+### Added Stuff
+
+- Added the event log to track specific game events.
+- Outdoor map objects (e.g. trees, rocks, pumpkins) can now be spawned, teleported and removed.
+- Vain shrouds can now be teleported around and removed from the map.
+- Added teleportation to fire exits to the teleportation window.
+- Added a virtual tape measure to measure distances in Unity units and meters.
+- Added an option to make the player untargetable for entities.
+- Added an option to disable all UI tooltips.
+- Added visualizers for the Roaming Locusts detection ranges.
+- Added visualizers for the Coil-Head detection radius.
+- Added an option to control the player's flying speed.
+- Added various debug options for the Company Cruiser.
+  - Cruiser god-mode option makes the cruiser invincible to damage.
+  - Infinite turbo option makes the cruiser have turbo permanently.
+  - Instant ignition option ,allows you to always start the cruiser on first try.
+  - Sliders for push force and acceleration.
+- Added various new default insights to the player and selected entities.
+- Added sliders to indicate the current field of view and movement speed when using the freecam.
+
+
+### Changes
+
+- Rewrote the object explorer lists to use object pooling to support basically an infinite amount of objects on the map with minimal performance impact.
+- Teleporting an item now causes it to play the drop SFX which can be detected by entities.
+
+### QoL Improvements
+
+- Min and max zoom icons are now clickable in the map zoom slider.
+- Replaced the icon of the preferences window with a more suitable one.
+- Reordered the dock buttons to improve intiution.
+- Added various tooltips to help simplify the navigation of the UI.
+- Improved teleport indicator navigation.
+
+### Internal Fixes
+
+- Fixed a bug where the weather wouldn't update on the ship's screen when in orbit.
+- Fixed a bug where the player would keep bleeding when activating god mode.
+- Fixed a bug where the damage UI overlay wouldn't go away when activating god mode.
+- Improved the first-person visualizer tracking of the shotgun visualizer by digger1213.
+- Upgraded [LethalNetworkAPI](<https://thunderstore.io/c/lethal-company/p/xilophor/LethalNetworkAPI/>) from v2 to v3.
+- Fixed a bug where scrolling would result in error spam in the logs.
+- Added fallback to Imperium startup if errors occur.
+- Added interval timing to Insight generator functions to greatly increase performance.
+- Fixed a problem with the zoom slider in the map interface.
+- Fixed problems with the factory reset functionality.
+- Fixed a bug where items would fall through the ground when spawned via freecam.
+- Imperium's assets are now bundled with the DLL, simplifying debugging.
+- Fixed the spawn report to actually log spawned entities.
+- Fixed the Baboon Hawk's LoS visualizers.
+- Fixed an Oracle problem related to the spawning of weed entities.
+- Fixed a bug where the ship ambience noise would be sped up.
+- Fixed a bug where spider webs would be indestructible after the spider has died.
+- Fixed a bug where mods that add entities with special characters in their name would interfere with Imperium's launch.
+- Fixed a bug where the freecam's field of view would get stuck.
+
+## Imperium v0.2.1 [Beta] - V56 Compatibility Patch
+
+A hotfix to allow support for the released v56 version of Lethal Company.
+
+**Note:** *This version of Imperium is **only** compatible with the [Version 56](<https://steamdb.info/changelist/24262549/>) of Lethal Company.*
+
+### Internal Fixes
+
+- Added compatibility for the new v56 patch ([24261494](<https://steamdb.info/changelist/24262549/>)).
+- Fixed a bug where setting the weather to "None" would break the game.
+- Updated Oracle Spawn Prediction to account for the bugfixes and weed enemies.
+
+## Imperium v0.2.0 [Beta] - The Interface Update
+
+This update is a huge one and mainly aimed at the rework of the UI system as well as the integration of new visualizers and debug options for the new update v55! As the previous UI solution was quite static and hard to maintain and expand, I decided to switch from static views with frozen windows to a more dynamic approach with floating windows! I also decided to finally integrate [InputUtils](<https://thunderstore.io/c/lethal-company/p/Rune580/LethalCompany_InputUtils/>), as a lot of people have requested. Imperium keybinds can now be re-bound in the settings.
+
+Besides that, I re-wrote the whole internal networking and switched form manual RPCs to using the [LethalNetworkAPI](<https://github.com/Xilophor/LethalNetworkAPI>) for all network communication in Imperium. This should provide more stability when using Imperium in multiplayer and reduce client de-syncs when changing game variables at runtime.
+
+Finally, I also expanded the Imperium API and added a lot of new functionality, including being able to synchronously spawn items and entities as well as enabling and disabling core functionality such as god mode or flight.
+
+### Added Stuff
+
+- Merged most of the smaller windows into a large Imperium UI that supports floating windows.
+  - Windows can be dragged and resized with the mouse cursor.
+  - Holding `Alt` and dragging an window results in the window being resized.
+
+- Added tooltips to several buttons and Imperium settings to serve as in-game help with the interface.
+- Added [InputUtils](<https://thunderstore.io/c/lethal-company/p/Rune580/LethalCompany_InputUtils/>) integration to make keybinds changeable in the settings.
+- Merged the navigator window and ship settings into a new Ship Control UI.
+- Moon settings were merged with the moon control center into a new Moon Control UI.
+- The teleport UI and the waypoint manager were merged into a new Teleportation UI.
+- Added support for modded weathers in the Moon Control UI.
+- Added scrap, entity and map hazard spawning functions to the Imperium API.
+- Added steam valves as new map hazard in the object explorer and spawn UI.
+- Added new custom visualizer for Nutcrackers.
+- Added new custom visualizer for Hoarding Bugs.
+- Added an option to permanently enable the drunk effect from the TZP-Inhalant.
+- Added new custom visualizer for the Kidnapper Fox.
+- Added an option to spawn Vain Shrouds from the SpawningUI.
+- Added a new visualizer for Vain Shrouds.
+- Added a new visualizer for Vain Shroud attraction points.
+- Added an option to spawn the Company Cruiser from the SpawningUI.
+- Added default insights for the Company Cruiser.
+- Added a slider to change the push control for the Company Cruiser.
+
+### Changes
+
+- Small Object Explorer functionality rework.
+  - Toggling objects in the object explorer is now synced with other clients.
+  - Disabling entities now results in them being frozen instead of deactivated.
+  - Toggling turrets and landmines now results in them being enabled / disabled as if an employee would do it from the terminal instead of the object itself being enabled / disabled.
+  - Toggling breaker boxes now results in all the switches being flipped instead of the object itself being  enabled / disabled.
+  - Toggling steam valves will burst / repair them.
+- Merged the amazing shotgun visualizer rework by [digger1213](<https://github.com/digger1213>).
+- Pausing time is now possible from space.
+
+### QoL Improvements
+
+- Adjusted all themes to better match the new overlapping window style.
+- Modded weather and moons now show up correctly in the respective UIs.
+- Freecam flight controls were changed to match with the creative flying controls.
+  - Default: `Ctrl` -> Descend, `Space` -> Ascend, `Return` -> Toggle the selected layer.
+- The zoom slider in the Map UI now uses a logarithmic scale.
+- Various small changes to the Oracle UI including new formatting of the vectors.
+- Added a way to highlight entity ghost spawns for indoor entities (Caused by a bug in the game).
+- Disabling the flying option now disables flight.
+- Added aliases for Insight class names to simplify class identification.
+- Changed the trigger, collider and navmesh surface visualizer's material.
+
+### Internal Fixes
+
+- Fixed a bug where it was not possible to join an Imperium lobby without having Imperium installed.
+- Fixed the animation skipping options `Interact` and `InteractHold`.
+- Fixed a typo in a function signature in the Imperium API.
+- Fixed a bug where players could die in orbit when god mode was off.
+- Changed it so insight generators are executed in `LateUpdate` for consistency.
+- Fixed player invisibility and made it more consistent across all entities.
+- Fixed a bug where the ship would always land instantly, even after disabling the option.
+- Fixed a bug where Nutcrackers were affected by infinite ammo and full auto shotgun.
+- Added various functions to the log silencer feature of Imperium.
+
+## Imperium v0.1.9 [Beta] - The API Update
+
+As so many of you have requested more advanced debugging functionality that can be accessed by other mods, I have started to implement an API that can be used either in the UE console or by other mods.
+
+I also started writing a wiki that should cover the basics on how to use Imperium as well as information for devs that want to work with Imperium or contribute to Imperium.
+
+### Added Stuff
+
+- Added the Imperium API and a [wiki](https://github.com/giosuel/imperium/wiki) for it.
+- Added minecraft-like creative flight.
+- Added options for the ship to instantly land, take off and travel betwen planets.
+- Added an option that removes the hold time on interact triggers (e.g. ship lever or main entrance).
+- Added new custom visualizer for Old Birds.
+- Added new custom visualizer for Baboon Hawks.
+- Added a moon indicator to the minimap.
+
+### QOL Changes
+
+- I had to limit the possible quota deadline to 3 days as deadlines above 4 were actually breaking the game. Instead, I added an option to completely disable the quota deadline for testing.
+- Turning on god mode now restores health to full and removes the damage overlay.
+
+### Internal Fixes
+
+- Fixed a bug where spawned entities would sometimes be placed below the ground.
+
+### Known Issues
+
+- Switching between Unity Explorer and a Imperium UI directly breaks the cursor.
+  - To fix, just open and close Unity Explorer once.
+
+- Scanner overlays are broken at higher texture resolutions.
+
+- There are currently some issues with multiplayer. Mostly, when someone without Imperium is trying to join an Imperium lobby.
+
+### Compatibility
+
+This version is compatible with the [v50](https://steamdb.info/changelist/23181066/) update of Lethal Company ([Imperium Mod Compatibilities](https://docs.google.com/spreadsheets/d/1DR3VFAv5toT6UEv1PLRXMWODpXgcdFucxhm3qVJAyxA/edit#gid=0)).
+
+## Imperium v0.1.8 [Beta] - The Visualizer Update
+
+I reworked the whole visualizer system and added a lot of new visualizers and indicators, including indicators for entity LOS and noise detection.
+
+There is a new UI from which all visualizers can be managed!
+
+### Added
+
+- Added many new visualizers for various game objects and layers.
+- Added a new notification type for access control and spawning notifications.
+- Added a new interface to manage all the visualizers in one place.
+- Added entity LOS, proximity and noise detection visualizations.
+- Added an option to disable out-of-bounds triggers.
+- Added an option to unlock all unlockable items in the terminal shop.
+- Added a scaling option for the minimap in the minimap settings.
+
+### QOL Changes
+
+- Entity and Player info panels are now rendered in screen-space, resulting in higher resolution.
+- The size of the visualizers for indoor and outdoor nodes has been decreased.
+- Clamped the freecam movement speed between 1 and 200.
+
+### Internal Fixes
+
+- Fixed a bug where Imperium client access would lock the host out.
+- Fixed a bug where the render pipeline changed the aspect ratio of some screens.
+- Fixed an issue where not all notifcations were toggleable.
+- Fixed a bug where the map camera clipping would not adjust when in unlocked mode.
+
+### Known Issues
+
+- Switching between Unity Explorer and a Imperium UI directly breaks the cursor.
+  - To fix, just open and close Unity Explorer once.
+
+- Scanner overlays are broken at higher texture resolutions.
+
+### Compatibility
+
+This version is compatible with the [v50](https://steamdb.info/changelist/23181066/) update of Lethal Company. ([Imperium Mod Compatibilities](https://docs.google.com/spreadsheets/d/1DR3VFAv5toT6UEv1PLRXMWODpXgcdFucxhm3qVJAyxA/edit#gid=0))
+
+## Imperium v0.1.7 [Beta] - Hotfix
+
+### Internal Fixes
+- Removed unnecessary debug statements.
+- Fixed a bug where items would fall through the ground when teleporting them.
+- Fixed a bug where the version wouldn't display correctly.
+- FIxed a big where spawned items would fall through the ground.
+
+## Imperium v0.1.6 [Beta] - The Map Update
+
+Imperium now has its own isometric map and minimap!
+
+Besides that, Imperium's UI got a complete overhaul with new components, better and more consistent alignment and brand new interface skins! There are currently 8 different interface skins to pick from.
+
+I also reworked the night vision system to be more uniform and comfortable to use.
+
+### Compatibility
+
+This version is compatible with the [v50](https://steamdb.info/changelist/23181066/) update of Lethal Company ([Imperium Mod Compatibilities](https://docs.google.com/spreadsheets/d/1DR3VFAv5toT6UEv1PLRXMWODpXgcdFucxhm3qVJAyxA/edit#gid=0)).
+
+### Added
+
+- Added a hybrid 2D/3D isometric map - Open with **F8**.
+
+  - Added minimap - Open with **M**.
+
+  - **LMB** - Look, **RMB** - Move, **MMB** - Zoom, **R** - Reset
+
+- Added an option to prevent the ship from leaving automatically.
+
+- Added eight new interface skins to pick from.
+
+- Added option for host to allow or disallow Imperium commands from clients.
+
+- Added visualization for interact triggers.
+
+### Changes
+
+- Completely overhauled the look and feel of the Imperium interface.
+- Reworked night vision to be more uniform and comfortable to use.
+- The custom welcome message can now be turned off in the settings.
+
+### Internal Fixes
+
+- **Multiplayer works again!**
+- Security doors now correctly open and close.
+- Fixed a bug where changing weathers was causing an exception on certain moons.
+- Fixed the freecam teleport button in the Teleport UI.
+- Fixed a bug where Oracle crashed when a vent was overwritten.
+
+### QOL Changes
+
+- Teleport Indicator can now be toggled with **T**.
+- The "Vent" category in the object explorer can now be collapsed properly.
+
+### Known Issues
+- Switching between Unity Explorer and a Imperium UI directly breaks the cursor.
+  - To fix, just open and close Unity Explorer once.
+
+- Scanner overlays are broken at higher texture resolutions.
+
+## Imperium v0.1.5 [Beta] - The Compat Update
+
+I re-wrote the entity and item management system to improve the compatibility with mods that add items and entities with [LethalLib](https://thunderstore.io/c/lethal-company/p/Evaisa/LethalLib/).
+
+In general, using Imperium in existing v50 modpacks should now work a lot better, but I still can't guarantee that it doesn't break with certain mods.
+
+### Compatibility
+
+This version is compatible with the [v50](https://steamdb.info/changelist/23181066/) update of Lethal Company.
+
+### Changes
+
+- Completely rewrote the Spawning UI and entity handling system to be more robust.
+- Added support for modded items and entities.
+- Items, scrap and spider webs can now be teleported from the Object Explorer.
+- Added indoor spawning vents to the Object Explorer.
+- Added breaker boxes to the Object Explorer.
+- Added a slider to set the time of the day.
+
+### Internal Fixes
+
+- Changing the weather in real-time is now fully implemented.
+- FOV transitions are now smooth (e.g. when sprinting).
+- Fixed a bug that caused freecam inputs to go through when the UI was open.
+- Fixed the BepInEx dependency.
+- Fixed a bug that caused problems when spawning entities with a space in their name.
+- Removed most of the reflection to improve performance.
+
+### QOL Changes
+
+- Entity spawn location can now be picked interactively when in freecam.
+- Freecam now spawns above the player when opened for the first time.
+- More overlays now correctly look at freecam when its active.
+
+#### Known Mod Incompatibilities
+
+- [Minimap](https://thunderstore.io/c/lethal-company/p/Tyzeron/Minimap/) by Tyzeron - Conflicts with the cursor locking
+
+## Imperium v0.1.4 [Beta] - The Noise Update
+
+### Compatibility
+
+This version is compatible with the [v50 rev.4](https://steamdb.info/changelist/23125974/) update of Lethal Company.
+
+### Added Features
+
+- Added picture-in-picture mode for freecam (Shortcut: **X**).
+- Added keybind to toggle the Player HUD (Shortcut: **Z**).
+- Added visualization of the outdoor spawn denial points.
+- Added night vision to the freecam.
+- Added noise markers to indicate nearby noises.
+
+### Internal Fixes
+
+- Switched from runtime netcode patching to [post-build patching](https://github.com/EvaisaDev/UnityNetcodePatcher).
+
+### QOL Changes
+
+- Dead entities are now marked as dead in the object explorer.
+
+## Imperium v0.1.3 [Beta] - Hotfix
+
+### Compatibility
+
+This version is compatible with the [v50 rev.3](https://steamdb.info/changelist/23055571/) update of Lethal Company.
+
+### Buxfixes
+
+- Adjusted Oracle predictions as the daytime entity bug was fixed.
+- Updated README with new images. k
+-  la

@@ -1,0 +1,8 @@
+{
+  "author": "giosuel",
+  "name": "Imperium",
+  "version": "1.3.0",
+  "config_files": [
+    "BepInEx/config/giosuel.Imperium.cfg"
+  ]
+}
