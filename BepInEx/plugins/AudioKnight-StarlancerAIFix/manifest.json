@@ -1,6 +1,6 @@
 {
     "name": "StarlancerAIFix",
-    "version_number": "3.12.0",
+    "version_number": "3.13.0",
     "website_url": "https://github.com/AudioKnight/Starlancer",
     "description": "Automatically assigns interior/exterior AI for enemies based on their spawn location and adjusts certain behaviors so that they act appropriately. Part of my Starlancer Series!",
     "dependencies": [

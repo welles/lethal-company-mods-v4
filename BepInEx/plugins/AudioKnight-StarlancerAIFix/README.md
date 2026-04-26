@@ -15,3 +15,5 @@ Get the full modpack here: https://thunderstore.io/c/lethal-company/p/AudioKnigh
 **1A3** for providing a fix for spawning interior enemies on the Company moon!
 
 **Fandovec03** for contributing!
+
+**Pacoito** for contributing!

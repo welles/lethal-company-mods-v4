@@ -1,3 +1,8 @@
+- 3.13.0
+  - Gunkfish slime now works outside.
+    - Thanks Pacoito!
+  - Shifted logging to the Debug channel to cleanup the console.
+
 - 3.12.0
   - Recompiled for v80.
     - BepInEx dependency has been updated to v5.4.2305
