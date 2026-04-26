@@ -1,0 +1,8 @@
+{
+  "author": "zealsprince",
+  "name": "Malfunctions",
+  "version": "1.10.3",
+  "config_files": [
+    "BepInEx/config/com.zealsprince.malfunctions.cfg"
+  ]
+}
