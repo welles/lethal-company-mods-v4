@@ -1,7 +1,7 @@
 {
   "author": "DemonMae",
   "name": "Dungeons_Ultimately_Lacking_Liveliness",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "config_files": [
     "BepInEx/config/JLL/DemonMae.Abandoned Foundry.cfg",
     "BepInEx/config/JLL/DemonMae.Gray Apartments.cfg",

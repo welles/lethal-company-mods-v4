@@ -1,3 +1,7 @@
+# 1.8.2
+- Spelunkers Caverns updated to v1.2.2
+- ACF Site updated to v1.2.1
+
 # 1.8.1
 - Spelunkers Caverns updated to v1.2.1
 
