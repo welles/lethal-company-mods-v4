@@ -64,7 +64,7 @@ if (!$DoesGitExeExist -or !($GitVersion -like "git version*"))
     Write-Host "### " -ForegroundColor Cyan -NoNewline
     Write-Host "Lade aktuelle Git-Installation herunter..."
 
-    $LatestRelease = (Invoke-WebRequest https://api.github.com/repos/git-for-windows/git/releases | ConvertFrom-Json) | Where-Object { $_.Prerelease -eq $False } | Select-Object -First 1
+    $LatestRelease = (Invoke-WebRequest https://api.github.com/repos/git-for-windows/git/releases -UseBasicParsing | ConvertFrom-Json) | Where-Object { $_.Prerelease -eq $False } | Select-Object -First 1
     $LatestReleaseAsset = $LatestRelease.Assets | Where-Object { $_.Name -match "PortableGit-[\d.]+-64-bit\.7z\.exe" }
     $LatestReleaseDownloadUrl = $LatestReleaseAsset.Browser_Download_Url
 
