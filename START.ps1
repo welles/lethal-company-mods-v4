@@ -17,7 +17,7 @@ $global:ErrorActionPreference = $ErrorActionPreference
 
 $ExecutableName = "Lethal Company"
 $ThunderstoreName = "lethal-company"
-$GitRepositoryName = "lethal-company-mods-v3"
+$GitRepository = "https://github.com/welles/lethal-company-mods-v4.git"
 $SteamGameId = "1966720"
 
 $BaseDirectory = $PSScriptRoot
@@ -106,7 +106,7 @@ $Host.UI.RawUI.ForegroundColor = "DarkGray"
 $RemoteUrl = (Invoke-Utility "$BaseDirectory\git\bin\git.exe" config --get remote.origin.url)
 $Host.UI.RawUI.ForegroundColor = $OriginalColor
 
-if ($IsRepository -ne "true" -or $RemoteUrl -ne "https://gitea.welles.app/nico/$GitRepositoryName.git")
+if ($IsRepository -ne "true" -or $RemoteUrl -ne "$GitRepository")
 {
     Write-Host "### " -ForegroundColor Cyan -NoNewline
     Write-Host "Lokale Spieldateien sind nicht mit dem Repository verbunden!" -ForegroundColor Yellow
@@ -130,7 +130,7 @@ if ($IsRepository -ne "true" -or $RemoteUrl -ne "https://gitea.welles.app/nico/$
     Write-Host "Stelle Verbindung zum Repository-Server her..."
 
     $Host.UI.RawUI.ForegroundColor = "DarkGray"
-    Invoke-Utility "$BaseDirectory\git\bin\git.exe" remote add origin https://gitea.welles.app/nico/$GitRepositoryName.git
+    Invoke-Utility "$BaseDirectory\git\bin\git.exe" remote add origin $GitRepository
     $Host.UI.RawUI.ForegroundColor = $OriginalColor
 
     Write-Host "### " -ForegroundColor Cyan -NoNewline
