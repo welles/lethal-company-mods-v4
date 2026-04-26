@@ -170,4 +170,3 @@ $Host.UI.RawUI.ForegroundColor = $OriginalColor
 
 Write-Host "### " -ForegroundColor Cyan -NoNewline
 Write-Host "Fertig! Das Spiel kann gestartet werden!" -ForegroundColor Green
-
