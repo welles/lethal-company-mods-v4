@@ -1,3 +1,34 @@
+## 1.5.5
+
+##### All Moons
+
+* (HOPEFULLY) Fixed custom items and spawnable objects having weird behaviour on LCVR. (If it is still broken, i'll tackle this issue at a later date since it is not a priority of mine right now)
+* Tweaked the moons with new foliage for them to be less floaty and more grounded.
+* Added new ship navmeshes that vanilla ship have.
+
+##### Taldor
+
+* Reduced the tilt even more again.
+
+##### Thrive
+
+* Fixed a lighting issue when transitioning from day to night. 
+
+##### Row
+
+* The fan will not push you out of a vehicle anymore BUT the wind may push the vehicle. Drive carefully!
+* Tweaked some pipes placements.
+* It should be easier to climb certain rocks.
+* Moved one of the fire exits closer to the ship.
+
+##### Dejection
+
+* Tiny graphical overhaul.
+
+##### Nostalgia
+
+* Fixed the sky doing a flash-bang when switchig to the nighttime sky
+
 ## 1.5.4
 
 ##### Taldor

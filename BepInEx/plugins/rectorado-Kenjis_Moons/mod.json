@@ -1,7 +1,7 @@
 {
   "author": "rectorado",
   "name": "Kenjis_Moons",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "config_files": [
     "BepInEx/config/JLL/Kenji.476-Taldor.cfg",
     "BepInEx/config/LethalLevelLoader.cfg",
