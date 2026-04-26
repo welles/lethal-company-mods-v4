@@ -18,5 +18,8 @@
 # Imperium
 /BepInEx/config/giosuel.Imperium.cfg
 
+# InputUtils Overrides
+/BepInEx/config/controls/
+
 # Portable Git
 /git/
