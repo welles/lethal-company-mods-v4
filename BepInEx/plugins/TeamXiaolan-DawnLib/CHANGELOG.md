@@ -1,7 +1,13 @@
-# v0.9.10
+# v0.9.11
+
+- Synced `ChangeWeatherTo` method, only call this on the host please.
+- Added WR compat to `ChangeWeatherTo` method.
+- Edited some hazard code due to new stuff by zeekerss on v81.
+
+## v0.9.10
 
 - Fixed fire exits desync with only DawnLib installed.
-- Added new `ChangeWeather` to that uses `DawnWeatherEffectInfo`.
+- Added new `ChangeWeatherTo` that uses `DawnWeatherEffectInfo`.
 - Fixed RoutePrice configs not generating.
 - Added public interface to the saving of items' locations so that they're not loaded back into the centre of the ship if need be.
 
