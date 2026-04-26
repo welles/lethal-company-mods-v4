@@ -1,0 +1,8 @@
+{
+  "author": "Ccode_lang",
+  "name": "The_Rolling_Chair",
+  "version": "1.0.4",
+  "config_files": [
+    "BepInEx/config/ccode.chair.cfg"
+  ]
+}

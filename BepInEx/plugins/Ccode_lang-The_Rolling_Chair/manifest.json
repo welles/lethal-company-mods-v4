@@ -1,0 +1,9 @@
+{
+    "name": "The_Rolling_Chair",
+    "version_number": "1.0.4",
+    "website_url": "https://github.com/Ccode-lang/TheRollingChair",
+    "description": "A way out.",
+    "dependencies": [
+        "Evaisa-LethalLib-1.1.1"
+    ]
+}
