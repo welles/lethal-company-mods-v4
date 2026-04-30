@@ -1,0 +1,8 @@
+{
+  "author": "explodingMods",
+  "name": "LethalMoonUnlocks",
+  "version": "2.4.6",
+  "config_files": [
+    "BepInEx/config/com.xmods.lethalmoonunlocks.cfg"
+  ]
+}

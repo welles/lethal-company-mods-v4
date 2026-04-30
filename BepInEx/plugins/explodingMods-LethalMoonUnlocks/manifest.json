@@ -1,0 +1,12 @@
+{
+  "name": "LethalMoonUnlocks",
+  "version_number": "2.4.6",
+  "website_url": "https://discord.com/channels/1168655651455639582/1264314686170730688",
+  "description": "Unlock moons permanently or progressively reduce their costs. Adds a bunch of progression mechanics in Discovery mode. Story progression and LethalConstellations support, moon sales and more.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100",
+    "xilophor-LethalNetworkAPI-3.3.2",
+    "IAmBatby-LethalLevelLoader-1.6.8",
+    "Hamunii-TypeLoadExceptionFixer-1.0.4"
+  ]
+}
