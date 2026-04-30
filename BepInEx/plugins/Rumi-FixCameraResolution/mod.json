@@ -1,0 +1,8 @@
+{
+  "author": "Rumi",
+  "name": "FixCameraResolution",
+  "version": "1.5.3",
+  "config_files": [
+    "BepInEx/config/Rumi.FixCameraResolutions.cfg"
+  ]
+}

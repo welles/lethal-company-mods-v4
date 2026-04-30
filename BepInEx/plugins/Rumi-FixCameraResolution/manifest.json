@@ -1,0 +1,9 @@
+{
+  "name": "FixCameraResolution",
+  "version_number": "1.5.3",
+  "website_url": "https://github.com/Rumi727/Fix-Camera-Resolution",
+  "description": "Modifies camera resolution (customizable). Supports fog/visor removal and UI aspect ratio unlock. Compatible with Lethal Config.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ]
+}
