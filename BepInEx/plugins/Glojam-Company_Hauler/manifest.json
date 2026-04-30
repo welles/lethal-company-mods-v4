@@ -1,0 +1,10 @@
+﻿{
+	"name": "Company_Hauler",
+	"version_number": "1.1.2",
+	"website_url": "https://github.com/Glojam/CompanyHauler",
+	"description": "Adds a 4-seater pickup truck to the terminal",
+	"dependencies": [
+        "BepInEx-BepInExPack-5.4.2304",
+		"IAmBatby-LethalLevelLoader-1.6.5"
+	]
+}
