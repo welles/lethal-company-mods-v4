@@ -1,0 +1,12 @@
+{
+  "namespace": "Hamunii",
+  "name": "TypeLoadExceptionFixer",
+  "description": "Fixes issues caused by unloadable types.",
+  "version_number": "1.0.4",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100",
+    "MonoDetour-MonoDetour_BepInEx_5-0.7.0"
+  ],
+  "website_url": "https://github.com/Hamunii/TypeLoadExceptionFixer",
+  "FullName": "Hamunii-TypeLoadExceptionFixer"
+}
