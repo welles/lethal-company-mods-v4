@@ -1,0 +1,9 @@
+{
+  "author": "fumiko",
+  "name": "CullFactory",
+  "version": "2.0.7",
+  "config_files": [
+    "BepInEx/config/com.fumiko.CullFactory.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
