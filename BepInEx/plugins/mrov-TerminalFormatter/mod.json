@@ -1,0 +1,9 @@
+{
+  "author": "mrov",
+  "name": "TerminalFormatter",
+  "version": "0.2.35",
+  "config_files": [
+    "BepInEx/config/TerminalFormatter.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
