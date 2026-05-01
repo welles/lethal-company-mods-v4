@@ -1,0 +1,9 @@
+{
+  "name": "YPlayBoombox",
+  "version_number": "2.7.0",
+  "website_url": "",
+  "description": "Listen to YouTube audio on your boombox and cruiser with your friends! All players must have this installed!",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305"
+  ]
+}

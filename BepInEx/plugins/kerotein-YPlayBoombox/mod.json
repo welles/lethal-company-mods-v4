@@ -1,0 +1,9 @@
+{
+  "author": "kerotein",
+  "name": "YPlayBoombox",
+  "version": "2.7.0",
+  "config_files": [
+    "BepInEx/config/kerotein.YPlayBoombox.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
