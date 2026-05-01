@@ -1,0 +1,9 @@
+{
+  "author": "mrov",
+  "name": "MrovLib",
+  "version": "0.4.3",
+  "config_files": [
+    "BepInEx/config/MrovLib.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
