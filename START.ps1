@@ -109,7 +109,7 @@ if (!$Does7zExeExist)
     Write-Host "### " -ForegroundColor Cyan -NoNewline
     Write-Host "Extrahiere lokale 7-Zip-Installation..."
 
-    Start-Process -FilePath "$BaseDirectory\7z-install.exe" -ArgumentList "-o `"$BaseDirectory\7z`" -y" -Wait -NoNewWindow
+    Start-Process -FilePath "$BaseDirectory\7z-install.exe" -ArgumentList "/S /D=$BaseDirectory\7z" -Wait -NoNewWindow
 
     Remove-Item -Path "$BaseDirectory\7z-install.exe" -Force
 
