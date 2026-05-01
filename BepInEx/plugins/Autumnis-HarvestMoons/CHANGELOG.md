@@ -1,0 +1,214 @@
+- 1.5.6
+  - Forgot to package the DLL for the AI of the Blind Pups. Whoops!
+- 1.5.5
+  - Adjusted water visuals on Cambrian.
+  - Adjusted water rising on Cambrian.
+  - Fixed being unable to bring two handed scrap onto the ship on Cambrian.
+- 1.5.4
+  - Gave Sierra a higher chance for Facility.
+  - Adjusted power counts of Sierra.
+  - Significantly increased gold bar chance on Sierra.
+  - Added a light to the main entrance on Sierra so it can be seen in the dark.
+  - Disabled Sierra's dog temporarily(?).
+  - Added water to the ravine on Temper since I thought it'd be cool.
+  - Redid the trees on Temper.
+  - Remade Cambrian.
+  - Configs still do not work.
+- 1.5.3
+  - THIS UPDATE IS UNFINISHED, RUSHED AND UNTESTED. IF THERE'S A BUG, PLEASE ACTUALLY TELL ME. (contact info at bottom of readme)
+  - I Promise I Will Add Archaic Eventually Please Stop Killing Me I Will Give Y Ou Another Deal.
+  - Added randomly spawning bushes to the interior on Fray.
+  - Added randomly spawning dripping water to the interior on Cambrian.
+  - Added detailing to an accidental route on Sierra.
+  - Sierra's blind pup enemy no longer spawns anywhere else. Install the standalone mod if you want them elsewhere. i don't remember if i actually did this
+  - Blind pups now have a max spawn count of 3.
+  - Fixed item dropships missing music.
+  - Gave Cambrian equal spawn weights for all the vanilla interiors.
+  - Changed Cambrian's layout. (WIP)
+  - Added custom scrap to all of the moons. (WIP)
+  - Improved Sierra's main entrance.
+  - Removed Infested temporarily(?) to fix the mod. i think i did this?
+  - Added special descriptions for the moons when typing "info".
+  - Redid foliage on Fray.
+  - Removed custom story logs requirement. They were quite old and mediocre.
+  - Fixed the sky not darkening at night, and reset most custom sun animations to their vanilla versions.
+  - Removed custom animations from the bridges on temper and prominence. They broke the shaking animation.
+  - Seperated the moon bundles so they load better or something. This also almost doubled the file size. Gulp.
+  - Removed the terrameshed terrain because of terramesh breaking in my unity project.
+  - Added configs for guaranteed enemy spawns. (WIP, doesn't work)
+  - Replaced big stairs on Prominence with an elevator.
+  - Accidentally changed Prominence's layout because I deleted and redid all of the bridges.
+- 1.5.2
+  - Removed the weird broken bush on Prominence.
+  - Fixed Cambrian's navmesh being missing.
+- 1.5.1
+  - Added tower cranes to sierra. I've always wanted this prop on sierra but could never find a good model.
+  - Fixed blind pups not spawning on sierra.
+  - Fixed matriarch hawk having no animations.
+  - Fixed aquatic leviathan having no textures.
+  - Smoothed out the path that the ship takes on Prominence so it's less likely to clip into the terrain.
+  - Probably fixed sierra's sun not being visible.
+- 1.5.0
+  - Added a new moon, Prominence.
+  - New props on temper.
+  - Added puddles at some places on cambrian.
+  - Added Fungus of Instant Rage to temper.
+  - Changed the building on cambrian.
+  - Made the terrain on all the moons into a mesh, so post-processing applies to it.
+  - Changed sierra's blind pups to no longer instakill. Also moved its hitbox down so it cannot get you on railings in the mineshaft.
+  - Fixed fray's main entrance scan node being behind the building.
+  - Replaced foggy on temper with stormy.
+  - Blind pups might be broken. I don't know, I didn't test them.
+- 1.4.11
+  - Visual adjustments to Fray.
+  - Fixed Cambrian's main entrance scan node being behind them main entrance.
+  - Various improvements to temper.
+  - Wider ship and problematic pilotry are now compatible.
+  - October update.
+- 1.4.10
+  - Fixed quicksand being invisible on Sierra.
+- 1.4.9
+  - Rebalanced moon spawn curves.
+  - Fixed missing textures on Sierra.
+  - Significant changes to Sierra's layout and visuals.
+  - Made Sierra's terrain into a mesh.
+  - Added some more foliage to Fray.
+- 1.4.8
+  - Adjusted Sierra's inside fog.
+- 1.4.7
+  - Fixed a reverb trigger on Sierra.
+  - Removed fray's out of bounds terrain.
+  - fixed fray's navmesh being 25 megabytes??? how did this even happen?????
+  - Disabled Sierra's interior dust particles. (volumetrics are still present)
+  - Crazy? I was crazy once. They locked me in a room. A rubber room. A rubber room with rats. And rats made me crazy.
+- 1.4.6
+  - Updated to V60.
+  - Fixed quicksand being invisible on Temper.
+  - Adjustments to Temper's layout.
+  - Adjustments to Fray's layout.
+- 1.4.5
+  - Adjusted scrap counts on all moons.
+  - Fixed sun clipping on Sierra.
+  - MORE REBAR.
+  - Lots of visual adjustments to Sierra.
+  - A few gameplay adjustments to Sierra.
+  - Added out of bounds terrain to Fray.
+  - Improved eclipse skybox for Fray and added a night skybox to Sierra.
+  - Added free and paid tags to the moons.
+  - Once again fixed moon numbers conflicting with other moons.
+  - Made Fray's walk shorter.
+- 1.4.4
+  - Adjusted hazard spawns on Cambrian.
+  - Made Cambrian's walk shorter.
+  - Added more rebar to Cambrian.
+- 1.4.3
+  - Added heat haze effect to Sierra. Credit to v0xx for the effect!
+  - Adjusted second temper bridge strength.
+  - Updated Fray's story log area.
+  - Fixed render distance being low on Sierra and Cambrian via dynamic culling script from sf Desat.
+  - Removed viewextension requirement.
+  - Fixed water shader on Cambrian being messed up.
+- 1.4.2
+  - Fixed custom story logs.
+  - Reduced spike trap amount on Temper.
+  - Adjusted spawns on Cambrian.
+  - Fixed accidental inclusion of to do list.
+  - Added bestiary entry for Alpha and AL.
+- 1.4.1
+  - Fixed moon numbers conflicting with other moons.
+  - Reduced AL radar size.
+  - Added an easter egg to cambrian.
+- 1.4.0
+  - Added images to the thunderstore page.
+  - Added a new moon, Cambrian.
+  - Significantly improved Temper.
+  - Made trees and fence on Fray destructible via Cruiser.
+  - Made trees and blockade on Temper destructible via Cruiser.
+  - Fully removed Temper's broken custom enemy.
+  - Fixed debug object being present on Temper.
+- 1.3.9
+  - Accidentally uploaded the wrong version. Whoops.
+- 1.3.8
+  - Fixed alpha's pipe having collision.
+  - Properly set up vain shrouds on the moons.
+- 1.3.7
+  - Added some signs to Sierra.
+  - Reduced route time of moons.
+  - Adjusted foliage on Fray.
+  - Changed main path on Fray.
+- 1.3.6
+  - Replaced Temper's custom enemy with something else due to desync issues.
+  - Made eclipse cooler on Fray.
+  - Added hazards to the moons.
+  - Updated for V55.
+  - Adjusted terrain on Sierra for the Company Cruiserᵀᴹ.
+  - Do not bring the Company Cruiserᵀᴹ to Fray. It will not go well.
+  - Adjusted enemy spawns on all moons.
+- 1.3.5
+  - Fixed missing sun animations.
+- 1.3.4
+  - Fixed missing collisions.
+  - Fixed broken enemy.
+- 1.3.3
+  - Fixed custom enemies missing animations.
+- 1.3.2
+  - Fixed Fray being in description twice.
+- 1.3.1
+  - Fixed quantum dropships.
+  - Added Temper's description to the README.md
+- 1.3.0
+  - Added a new moon, Temper.
+  - Removed eclipsed from Sierra, because it's the closest to the sun.
+  - Fixed story logs not functioning.
+  - Changed sierra's fog.
+  - Removed buggy custom scrap.
+- 1.2.9
+  - Fixed alpha blood stains getting on other objects
+  - Fixed dubious lighting with Infested.
+  - Adjusted interior fog on Fray yet again.
+- 1.2.8
+  - Adjusted interior fog on Fray.
+  - Compressed a bunch more textures to save even more file size.
+  - Added some more buildings to Sierra.
+  - Readded smokestacks to Sierra.
+- 1.2.7
+  - Adjusted custom enemies.
+  - Changed lighting on both moons.
+  - Heavily changed foliage on Fray.
+- 1.2.6
+  - Fixed broken custom enemy on Fray.
+- 1.2.5
+  - Fixed broken facility collision on Fray.
+  - Fixed missing foliage on Fray.
+  - Added particle effects around sierra.
+  - Compressed a bunch of textures to save file size.
+  - Decreased old bird spawnrates on both moons.
+  - Increased alpha health becauuse it kept getting friendly fired.
+- 1.2.4
+  - Fixed alpha dog being registered incorrectly.
+- 1.2.3
+  - Hopefully fixed reverb trigger errors.
+- 1.2.2
+  - Adjusted fire exit on Fray.
+  - Adjusted interior fog on Fray.
+  - Reduced interior fog density on Sierra.
+- 1.2.1
+  - Gave alpha dog and another enemy an extendedenemytype.
+  - Adjusted hitbox for an enemy.
+- 1.2.0
+  - Adjusted fog on Sierra.
+  - Accidentally deleted Sierra's terrain and had to redo it all (oops!)
+  - Added a new moon, Fray.
+  - Updated for V50.
+  - Fixed some incorrect meshes.
+  - Made the alpha dog fancy.
+  - Adjusted spawns on Sierra.
+  - Adjusted scrap spawns on Sierra.
+- 1.1.0
+  - Adjusted spawns.
+  - Removed custom skybox for Sierra.
+  - Made things brighter.
+  - Fixed ambience.
+  - Adjusted fog.
+- 1.0.0
+  - Initial release.

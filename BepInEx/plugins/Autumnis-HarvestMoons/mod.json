@@ -1,0 +1,12 @@
+{
+  "author": "Autumnis",
+  "name": "HarvestMoons",
+  "version": "1.5.6",
+  "config_files": [
+    "BepInEx/config/JLL/Autumnis.Fray.cfg",
+    "BepInEx/config/JLL/Autumnis.Sierra.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg",
+    "BepInEx/config/LethalLevelLoader.cfg",
+    "BepInEx/config/ScienceBird.UniversalRadar.cfg"
+  ]
+}
