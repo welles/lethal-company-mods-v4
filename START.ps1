@@ -209,10 +209,7 @@ $Host.UI.RawUI.ForegroundColor = $OriginalColor
 Write-Host "### " -ForegroundColor Cyan -NoNewline
 Write-Host "Extrahiere aufgeteilte Mod-Dateien..."
 
-$Archives = Get-ChildItem -Path $BaseDirectory -Filter "*.7z.001" -Recurse -ErrorAction SilentlyContinue | Where-Object {
-    $_.FullName -notlike "$BaseDirectory\git\*" -and
-    $_.FullName -notlike "$BaseDirectory\7z\*"
-}
+$Archives = Get-ChildItem -Path "$BaseDirectory\BepInEx" -Filter "*.7z.001" -Recurse -ErrorAction SilentlyContinue
 
 foreach ($Archive in $Archives)
 {
