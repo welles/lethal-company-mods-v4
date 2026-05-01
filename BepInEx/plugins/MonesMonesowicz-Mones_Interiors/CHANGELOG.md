@@ -1,3 +1,18 @@
+**<details><summary>Version 0.5.9</summary>**
+# Haunted Hotel
+- More fire exits locations
+
+# Haunted Attic
+- More fire exits locations
+- Fixed sounds in doors
+- Fixed icon in doors
+- Scraps cant spawn outside the rooms
+
+# Basement
+- Scraps cant spawn outisde the rooms
+- Gate can always open even if you are standing very close to them
+</details>
+
 **<details><summary>Version 0.5.8</summary>**
 - Bugs fixed
 </details>

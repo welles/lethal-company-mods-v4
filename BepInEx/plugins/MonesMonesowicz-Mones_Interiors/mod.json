@@ -1,7 +1,7 @@
 {
   "author": "MonesMonesowicz",
   "name": "Mones_Interiors",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "config_files": [
     "BepInEx/config/AsyncLoggers/LogLevels.cfg",
     "BepInEx/config/LethalLevelLoader.cfg"
