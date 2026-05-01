@@ -417,6 +417,65 @@ function Install-SingleMod {
 
     Write-Host "[OK]" -ForegroundColor Green
 
+    Write-Host "Checking for large files (>=100MB)... " -NoNewline
+
+    $DirsToCheck = @("$PluginsDir\$FileName")
+    if (Test-Path "$PatchersDir\$FileName") { $DirsToCheck += "$PatchersDir\$FileName" }
+    if (Test-Path "$CoreDir\$FileName")    { $DirsToCheck += "$CoreDir\$FileName" }
+
+    $LargeFiles = $DirsToCheck | ForEach-Object {
+        Get-ChildItem -Path $_ -Recurse -File -ErrorAction SilentlyContinue
+    } | Where-Object { $_.Length -ge 100MB }
+
+    if ($LargeFiles.Count -eq 0)
+    {
+        Write-Host "[None found]" -ForegroundColor Green
+    }
+    else
+    {
+        Write-Host "[$($LargeFiles.Count) found]" -ForegroundColor Yellow
+
+        foreach ($LargeFile in $LargeFiles)
+        {
+            $ArchiveBase = "$($LargeFile.FullName).7z"
+            $FirstPart   = "$ArchiveBase.001"
+
+            if (Test-Path -Path $FirstPart)
+            {
+                Write-Host "Skipping $($LargeFile.Name) (already split)" -ForegroundColor DarkGray
+                continue
+            }
+
+            Write-Host "Splitting $($LargeFile.Name)... " -NoNewline
+
+            & 7z a -v100m "$ArchiveBase" "$($LargeFile.FullName)" | Out-Null
+
+            if ($LASTEXITCODE -ne 0)
+            {
+                Write-Host "[Fehler beim Aufteilen!]" -ForegroundColor Red
+            }
+            else
+            {
+                Write-Host "[OK]" -ForegroundColor Green
+
+                $GitIgnorePath = "$($LargeFile.DirectoryName)\.gitignore"
+                $EntryToAdd    = $LargeFile.Name
+
+                $ExistingEntries = @()
+                if (Test-Path $GitIgnorePath)
+                {
+                    $ExistingEntries = Get-Content $GitIgnorePath
+                }
+
+                if ($ExistingEntries -notcontains $EntryToAdd)
+                {
+                    Add-Content -Path $GitIgnorePath -Value $EntryToAdd
+                    Write-Host "Added '$EntryToAdd' to .gitignore" -ForegroundColor DarkGray
+                }
+            }
+        }
+    }
+
     if ($IsUpdate)
     {
         Write-Host "Update $($ModInfo.Name) by $($ModInfo.Author) to $($ModInfo.Version)" -ForegroundColor Magenta
