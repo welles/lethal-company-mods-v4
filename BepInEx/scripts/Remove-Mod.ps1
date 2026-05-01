@@ -1,5 +1,5 @@
 Param(
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory = $false)]
     [String]$Author,
     [Parameter(Mandatory = $true)]
     [String]$Mod
@@ -23,6 +23,45 @@ function Remove-SingleMod {
         [String]$Mod,
         [switch]$IsDependency
     )
+
+    if ([string]::IsNullOrEmpty($Author))
+    {
+        $InstalledMods = @(Get-ChildItem "$PluginsDir\*\mod.json" -ErrorAction SilentlyContinue |
+            ForEach-Object { ConvertFrom-Json (Get-Content $_.FullName -Raw) } |
+            Where-Object { $_.name -eq $Mod })
+
+        if ($InstalledMods.Count -eq 0)
+        {
+            Write-Host "No installed mod named " -NoNewline -ForegroundColor Red
+            Write-Host $Mod -NoNewline -ForegroundColor Cyan
+            Write-Host " found!" -ForegroundColor Red
+
+            exit
+        }
+        elseif ($InstalledMods.Count -eq 1)
+        {
+            $Author = $InstalledMods[0].author
+        }
+        else
+        {
+            Write-Host "Multiple mods named " -NoNewline
+            Write-Host $Mod -NoNewline -ForegroundColor Cyan
+            Write-Host " are installed. Choose one:" -ForegroundColor Yellow
+
+            for ($i = 0; $i -lt $InstalledMods.Count; $i++)
+            {
+                Write-Host "[$($i + 1)] $($InstalledMods[$i].author)"
+            }
+
+            do
+            {
+                $Choice = Read-Host "Choice"
+            }
+            while (!($Choice -match '^\d+$') -or [int]$Choice -lt 1 -or [int]$Choice -gt $InstalledMods.Count)
+
+            $Author = $InstalledMods[[int]$Choice - 1].author
+        }
+    }
 
     Write-Host "Removing mod " -NoNewline
     Write-Host $Mod -NoNewline -ForegroundColor Cyan

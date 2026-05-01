@@ -1,5 +1,5 @@
 Param(
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory = $false)]
     [String]$Author,
     [Parameter(Mandatory = $true)]
     [String]$Mod,
@@ -32,11 +32,6 @@ function Install-SingleMod {
         [String]$Mod,
         [String]$Version
     )
-    Write-Host "Installing mod " -NoNewline
-    Write-Host $Mod -NoNewline -ForegroundColor Cyan
-    Write-Host " by " -NoNewline
-    Write-Host $Author -NoNewline -ForegroundColor DarkBlue
-    Write-Host "... "
 
     $ModListPath = "$BepInExDir\mods.json"
 
@@ -55,9 +50,52 @@ function Install-SingleMod {
         Write-Host "Using existing mod master list... ($LastModListUpdate)"
     }
 
-    Write-Host "Looking for mod in master list... " -NoNewline
-
     $ModList = ConvertFrom-Json (Get-Content $ModListPath -Raw)
+
+    if ([string]::IsNullOrEmpty($Author))
+    {
+        $NameMatches = @($ModList | Where-Object { $_.Name -eq $Mod })
+
+        if ($NameMatches.Count -eq 0)
+        {
+            Write-Host "No mod named " -NoNewline -ForegroundColor Red
+            Write-Host $Mod -NoNewline -ForegroundColor Cyan
+            Write-Host " found in Thunderstore!" -ForegroundColor Red
+
+            exit
+        }
+        elseif ($NameMatches.Count -eq 1)
+        {
+            $Author = $NameMatches[0].Owner
+        }
+        else
+        {
+            Write-Host "Multiple mods named " -NoNewline
+            Write-Host $Mod -NoNewline -ForegroundColor Cyan
+            Write-Host " found. Choose one:" -ForegroundColor Yellow
+
+            for ($i = 0; $i -lt $NameMatches.Count; $i++)
+            {
+                Write-Host "[$($i + 1)] $($NameMatches[$i].Owner)"
+            }
+
+            do
+            {
+                $Choice = Read-Host "Choice"
+            }
+            while (!($Choice -match '^\d+$') -or [int]$Choice -lt 1 -or [int]$Choice -gt $NameMatches.Count)
+
+            $Author = $NameMatches[[int]$Choice - 1].Owner
+        }
+    }
+
+    Write-Host "Installing mod " -NoNewline
+    Write-Host $Mod -NoNewline -ForegroundColor Cyan
+    Write-Host " by " -NoNewline
+    Write-Host $Author -NoNewline -ForegroundColor DarkBlue
+    Write-Host "... "
+
+    Write-Host "Looking for mod in master list... " -NoNewline
 
     $ModMetrics = $ModList | Where-Object { $_.Name -eq $Mod -and $_.Owner -eq $Author }
 
