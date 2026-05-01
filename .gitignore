@@ -26,3 +26,6 @@
 
 # Portable 7-Zip
 /7z/
+
+# AsyncLoggers
+/BepInEx/LogOutput.sqlite*

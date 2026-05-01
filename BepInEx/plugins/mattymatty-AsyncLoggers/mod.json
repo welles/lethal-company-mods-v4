@@ -1,0 +1,9 @@
+{
+  "author": "mattymatty",
+  "name": "AsyncLoggers",
+  "version": "2.2.3",
+  "config_files": [
+    "BepInEx/config/AsyncLoggers/Config.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
