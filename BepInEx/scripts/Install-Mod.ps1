@@ -489,7 +489,7 @@ function Install-SingleMod {
 
             Write-Host "Splitting $($LargeFile.Name)... " -NoNewline
 
-            & 7z a -v100m "$ArchiveBase" "$($LargeFile.FullName)" | Out-Null
+            & 7zz a -v100m "$ArchiveBase" "$($LargeFile.FullName)" | Out-Null
 
             if ($LASTEXITCODE -ne 0)
             {
