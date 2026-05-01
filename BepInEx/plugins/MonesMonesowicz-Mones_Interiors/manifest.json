@@ -1,0 +1,12 @@
+{
+ "name": "Mones_Interiors",
+ "version_number": "0.5.8",
+ "website_url": "",
+ "description": "All my interiors in one mod (v80+)",
+ "author":"",
+  "dependencies": [
+   "BepInEx-BepInExPack-5.4.2304",
+   "IAmBatby-LethalLevelLoader-1.6.9",
+   "WaterGun-WaterGunLib-1.5.0"
+  ]
+}
