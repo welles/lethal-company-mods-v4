@@ -1,0 +1,9 @@
+{
+  "name": "Moon_Day_Speed_Multiplier_Patcher",
+  "version_number": "1.0.1",
+  "website_url": "https://github.com/WhiteSpike/Moon-Day-Speed-Multiplier-Patcher",
+  "description": "Patches the time passing mechanism to solve problems whenever day speed multiplier value has been changed. This is meant for people who wish to use these values and are able to configure them to their desire.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ]
+}

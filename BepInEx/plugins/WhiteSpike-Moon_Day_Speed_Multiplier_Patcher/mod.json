@@ -1,0 +1,8 @@
+{
+  "author": "WhiteSpike",
+  "name": "Moon_Day_Speed_Multiplier_Patcher",
+  "version": "1.0.1",
+  "config_files": [
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
