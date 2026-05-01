@@ -1,7 +1,7 @@
 Param(
     [Parameter(Mandatory = $false)]
     [String]$Author,
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory = $true, Position = 1)]
     [String]$Mod
 )
 
