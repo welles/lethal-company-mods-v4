@@ -116,7 +116,7 @@ function Install-SingleMod {
     Write-Host $Mod -NoNewline -ForegroundColor Cyan
     Write-Host " by " -NoNewline
     Write-Host $Author -NoNewline -ForegroundColor DarkBlue
-    Write-Host "... "
+    Write-Host "... " -NoNewline
 
     if ($Version)
     {
