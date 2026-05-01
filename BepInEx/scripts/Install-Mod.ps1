@@ -92,37 +92,31 @@ function Install-SingleMod {
     }
     else
     {
-        $ModMetrics = $null
+        $ModMetrics = $ModList | Where-Object { $_.Name -eq $Mod -and $_.Owner -eq $Author }
+
+        if ($null -eq $ModMetrics)
+        {
+            Write-Host "The mod " -NoNewline -ForegroundColor Red
+            Write-Host $Mod -NoNewline -ForegroundColor Cyan
+            Write-Host " by " -NoNewline -ForegroundColor Red
+            Write-Host $Author -NoNewline -ForegroundColor DarkBlue
+            Write-Host " could not be found in Thunderstore!" -ForegroundColor Red
+
+            exit
+        }
     }
+
+    # Free memory by clearing the massive master list
+    $ModList = $null
+
+    $Mod    = $ModMetrics.Name
+    $Author = $ModMetrics.Owner
 
     Write-Host "Installing mod " -NoNewline
     Write-Host $Mod -NoNewline -ForegroundColor Cyan
     Write-Host " by " -NoNewline
     Write-Host $Author -NoNewline -ForegroundColor DarkBlue
     Write-Host "... "
-
-    Write-Host "Looking for mod in master list... " -NoNewline
-
-    if ($null -eq $ModMetrics)
-    {
-        $ModMetrics = $ModList | Where-Object { $_.Name -eq $Mod -and $_.Owner -eq $Author }
-    }
-
-    # Free memory by clearing the massive master list
-    $ModList = $null
-
-    if ($null -eq $ModMetrics)
-    {
-        Write-Host "[Error]" -ForegroundColor Red
-
-        Write-Host "The mod " -NoNewline -ForegroundColor Red
-        Write-Host $Mod -NoNewline -ForegroundColor Cyan
-        Write-Host " by " -NoNewline -ForegroundColor Red
-        Write-Host $Author -NoNewline -ForegroundColor DarkBlue
-        Write-Host " could not be found in Thunderstore!" -ForegroundColor Red
-
-        exit
-    }
 
     if ($Version)
     {
