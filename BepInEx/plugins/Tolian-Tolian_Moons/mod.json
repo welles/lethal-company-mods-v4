@@ -1,0 +1,9 @@
+{
+  "author": "Tolian",
+  "name": "Tolian_Moons",
+  "version": "2.4.7",
+  "config_files": [
+    "BepInEx/config/LethalLevelLoader.cfg",
+    "BepInEx/config/ScienceBird.UniversalRadar.cfg"
+  ]
+}

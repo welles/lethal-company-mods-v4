@@ -1,0 +1,13 @@
+{
+  "name": "Tolian_Moons",
+  "version_number": "2.4.7",
+  "website_url": "https://github.com/Toliann",
+  "description": "(LLL) Adds 21(19) new moons to the game",
+  "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100",
+	"IAmBatby-LethalLevelLoader-1.6.5",
+	"AudioKnight-StarlancerAIFix-3.6.0",
+	"JacobG5-JLL-1.9.9"
+  ]
+}
+
