@@ -1,0 +1,9 @@
+{
+  "author": "Hardy",
+  "name": "LCMaxSoundsFix",
+  "version": "1.2.0",
+  "config_files": [
+    "BepInEx/config/.LCMaxSoundsFix.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
