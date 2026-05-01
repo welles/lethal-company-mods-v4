@@ -63,12 +63,6 @@ function Remove-SingleMod {
         }
     }
 
-    Write-Host "Removing mod " -NoNewline
-    Write-Host $Mod -NoNewline -ForegroundColor Cyan
-    Write-Host " by " -NoNewline
-    Write-Host $Author -NoNewline -ForegroundColor DarkBlue
-    Write-Host "..."
-
     $FileName = "$Author-$Mod"
 
     if (!(Test-Path "$PluginsDir\$FileName\mod.json"))
@@ -80,7 +74,16 @@ function Remove-SingleMod {
         exit
     }
 
-    $ModInfo = ConvertFrom-Json (Get-Content "$PluginsDir\$FileName\mod.json" -Raw)
+    $ModInfo  = ConvertFrom-Json (Get-Content "$PluginsDir\$FileName\mod.json" -Raw)
+    $Mod      = $ModInfo.name
+    $Author   = $ModInfo.author
+    $FileName = "$Author-$Mod"
+
+    Write-Host "Removing mod " -NoNewline
+    Write-Host $Mod -NoNewline -ForegroundColor Cyan
+    Write-Host " by " -NoNewline
+    Write-Host $Author -NoNewline -ForegroundColor DarkBlue
+    Write-Host "..."
 
     # Warn if other mods still depend on this one, unless we were called from a
     # dependency removal — in that case the caller already knows about this relationship
