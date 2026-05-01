@@ -1,0 +1,9 @@
+{
+    "name": "Maxwell_ScrapItem",
+    "version_number": "1.0.2",
+    "website_url": "https://github.com/ChrisFeline",
+    "description": "Adds Maxwell the Cat as a scrap item that you can collect.",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100"
+    ]
+}
