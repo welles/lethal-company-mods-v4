@@ -66,7 +66,8 @@ function Install-SingleMod {
         }
         elseif ($NameMatches.Count -eq 1)
         {
-            $Author = $NameMatches[0].Owner
+            $Author    = $NameMatches[0].Owner
+            $ModMetrics = $NameMatches[0]
         }
         else
         {
@@ -85,8 +86,13 @@ function Install-SingleMod {
             }
             while (!($Choice -match '^\d+$') -or [int]$Choice -lt 1 -or [int]$Choice -gt $NameMatches.Count)
 
-            $Author = $NameMatches[[int]$Choice - 1].Owner
+            $Author     = $NameMatches[[int]$Choice - 1].Owner
+            $ModMetrics = $NameMatches[[int]$Choice - 1]
         }
+    }
+    else
+    {
+        $ModMetrics = $null
     }
 
     Write-Host "Installing mod " -NoNewline
@@ -97,7 +103,10 @@ function Install-SingleMod {
 
     Write-Host "Looking for mod in master list... " -NoNewline
 
-    $ModMetrics = $ModList | Where-Object { $_.Name -eq $Mod -and $_.Owner -eq $Author }
+    if ($null -eq $ModMetrics)
+    {
+        $ModMetrics = $ModList | Where-Object { $_.Name -eq $Mod -and $_.Owner -eq $Author }
+    }
 
     # Free memory by clearing the massive master list
     $ModList = $null
