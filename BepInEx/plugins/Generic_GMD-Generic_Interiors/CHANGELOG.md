@@ -1,3 +1,27 @@
+**4.1.2 (Patch of shame but also look hey 2 new tiles)**
+
+
+
+Overall
+
+* Fixed the Radmech being bundled for no reason
+
+
+
+Drains
+
+* Added two new tiles, the processing room and the narrow endcap storage tile.
+
+
+
+Bunker
+
+* Added in one of Bunker's scraps early for parity with Ignition releasing. The single barrel shotgun can be found there. (Download BeanieLib)
+
+
+
+
+
 **4.1.1 (Traditional patch of shame)**
 
 

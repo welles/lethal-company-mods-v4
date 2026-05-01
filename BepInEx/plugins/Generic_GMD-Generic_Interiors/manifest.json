@@ -1,6 +1,6 @@
 {
     "name": "Generic_Interiors",
-    "version_number": "4.1.1",
+    "version_number": "4.1.2",
     "website_url": "https://github.com/GenericGMD/Generic-Moons",
     "description": "Currently adds 3 interiors. Includes Storehouse, Drains, and Tower. Liminal Facility temp removed",
     "dependencies": [
