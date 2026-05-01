@@ -80,6 +80,44 @@ if (!$DoesGitExeExist -or !($GitVersion -like "git version*"))
 }
 
 Write-Host "### " -ForegroundColor Cyan -NoNewline
+Write-Host "Checke ob lokale 7-Zip-Installation vorhanden ist..."
+
+$Does7zExeExist = (Test-Path -Path "$BaseDirectory\7z\7z.exe")
+
+if (!$Does7zExeExist)
+{
+    Write-Host "### " -ForegroundColor Cyan -NoNewline
+    Write-Host "Lokale 7-Zip-Installation ist nicht vorhanden!" -ForegroundColor Yellow
+
+    if (Test-Path -Path "$BaseDirectory\7z")
+    {
+        Write-Host "### " -ForegroundColor Cyan -NoNewline
+        Write-Host "Entferne Reste alter 7-Zip-Installationen..."
+
+        Remove-Item -Path "$BaseDirectory\7z" -Recurse -Force
+    }
+
+    Write-Host "### " -ForegroundColor Cyan -NoNewline
+    Write-Host "Lade aktuelle 7-Zip-Installation herunter..."
+
+    $Latest7zRelease = (Invoke-WebRequest https://api.github.com/repos/ip7z/7zip/releases -UseBasicParsing | ConvertFrom-Json) | Where-Object { $_.Prerelease -eq $False } | Select-Object -First 1
+    $Latest7zAsset = $Latest7zRelease.Assets | Where-Object { $_.Name -match "7z[\d]+-x64\.exe" }
+    $Latest7zDownloadUrl = $Latest7zAsset.Browser_Download_Url
+
+    Invoke-WebRequest -Uri "$Latest7zDownloadUrl" -OutFile "$BaseDirectory\7z-install.exe"
+
+    Write-Host "### " -ForegroundColor Cyan -NoNewline
+    Write-Host "Extrahiere lokale 7-Zip-Installation..."
+
+    Start-Process -FilePath "$BaseDirectory\7z-install.exe" -ArgumentList "-o `"$BaseDirectory\7z`" -y" -Wait -NoNewWindow
+
+    Remove-Item -Path "$BaseDirectory\7z-install.exe" -Force
+
+    Write-Host "### " -ForegroundColor Cyan -NoNewline
+    Write-Host "Lokale 7-Zip-Installation wurde installiert!" -ForegroundColor Green
+}
+
+Write-Host "### " -ForegroundColor Cyan -NoNewline
 Write-Host "Deaktiviere Sperrung von fremden Git-Repositories..."
 
 Invoke-Utility "$BaseDirectory\git\bin\git.exe" config --global --unset-all safe.directory
@@ -167,6 +205,31 @@ Write-Host "Entferne Dateien, die nicht vom Spiel oder Repository sind..."
 $Host.UI.RawUI.ForegroundColor = "DarkGray"
 Invoke-Utility "$BaseDirectory\git\bin\git.exe" clean -df
 $Host.UI.RawUI.ForegroundColor = $OriginalColor
+
+Write-Host "### " -ForegroundColor Cyan -NoNewline
+Write-Host "Extrahiere aufgeteilte Mod-Dateien..."
+
+$Archives = Get-ChildItem -Path $BaseDirectory -Filter "*.7z.001" -Recurse -ErrorAction SilentlyContinue | Where-Object {
+    $_.FullName -notlike "$BaseDirectory\git\*" -and
+    $_.FullName -notlike "$BaseDirectory\7z\*"
+}
+
+foreach ($Archive in $Archives)
+{
+    $OriginalFilePath = $Archive.FullName -replace '\.7z\.001$', ''
+
+    $NeedsExtraction = !(Test-Path -Path $OriginalFilePath) -or
+                       ($Archive.LastWriteTime -gt (Get-Item $OriginalFilePath).LastWriteTime)
+
+    if ($NeedsExtraction)
+    {
+        Write-Host "Extrahiere $($Archive.Name)... " -NoNewline
+
+        Invoke-Utility "$BaseDirectory\7z\7z.exe" x "$($Archive.FullName)" "-o$($Archive.DirectoryName)" -y
+
+        Write-Host "[OK]" -ForegroundColor Green
+    }
+}
 
 Write-Host "### " -ForegroundColor Cyan -NoNewline
 Write-Host "Fertig! Das Spiel kann gestartet werden!" -ForegroundColor Green
