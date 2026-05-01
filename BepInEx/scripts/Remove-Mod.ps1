@@ -20,7 +20,8 @@ $CoreDir = "$BepInExDir\core"
 function Remove-SingleMod {
     param(
         [String]$Author,
-        [String]$Mod
+        [String]$Mod,
+        [switch]$IsDependency
     )
 
     Write-Host "Removing mod " -NoNewline
@@ -41,6 +42,34 @@ function Remove-SingleMod {
     }
 
     $ModInfo = ConvertFrom-Json (Get-Content "$PluginsDir\$FileName\mod.json" -Raw)
+
+    # Warn if other mods still depend on this one, unless we were called from a
+    # dependency removal — in that case the caller already knows about this relationship
+    if (!$IsDependency)
+    {
+        $Dependents = Get-ChildItem "$PluginsDir\*\manifest.json" -ErrorAction SilentlyContinue |
+            Where-Object { $_.Directory.Name -ne $FileName } |
+            ForEach-Object { ConvertFrom-Json (Get-Content $_.FullName -Raw) } |
+            Where-Object { $_.dependencies -like "$Author-$Mod-*" } |
+            ForEach-Object { $_.name }
+
+        if ($Dependents)
+        {
+            Write-Host "Warning: the following installed mods depend on $Mod`:" -ForegroundColor Yellow
+
+            foreach ($Dependent in $Dependents)
+            {
+                Write-Host "  - $Dependent" -ForegroundColor Yellow
+            }
+
+            $Confirmation = Read-Host "Remove anyway? (y/n)"
+
+            if ($Confirmation -ne "y")
+            {
+                exit
+            }
+        }
+    }
 
     # Read dependencies from manifest.json left behind by Thunderstore zip
     $Dependencies = @()
@@ -139,7 +168,7 @@ function Remove-SingleMod {
         elseif ($Choice -match '^\d+$' -and [int]$Choice -le $RemovableDeps.Count -and [int]$Choice -gt 0)
         {
             $SelectedDep = $RemovableDeps[[int]$Choice - 1]
-            Remove-SingleMod -Author $SelectedDep.Author -Mod $SelectedDep.Name
+            Remove-SingleMod -Author $SelectedDep.Author -Mod $SelectedDep.Name -IsDependency
             return
         }
         else
