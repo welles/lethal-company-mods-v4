@@ -216,7 +216,7 @@ foreach ($Archive in $Archives)
     {
         Write-Host "Extrahiere $($Archive.Name)... " -NoNewline
 
-        Invoke-Utility "$BaseDirectory\7z\7z.exe" x "$($Archive.FullName)" "-o$($Archive.DirectoryName)" -y
+        Invoke-Utility "$BaseDirectory\7z\7z.exe" x "$($Archive.FullName)" "-o$($Archive.DirectoryName)" -y -bso0 -bsp0
 
         Write-Host "[OK]" -ForegroundColor Green
     }
