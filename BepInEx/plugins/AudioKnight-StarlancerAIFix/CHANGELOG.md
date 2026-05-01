@@ -1,3 +1,7 @@
+- 3.13.1
+  - Fixed an incompatibility that arose when using DawnLib and LunarConfig
+    - Thanks XuXiaolan!
+
 - 3.13.0
   - Gunkfish slime now works outside.
     - Thanks Pacoito!
