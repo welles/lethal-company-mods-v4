@@ -1,0 +1,14 @@
+{
+ "name": "Mones_Moons",
+ "version_number": "0.6.4",
+ "website_url": "",
+ "description": "All my moons in one masive mod (v80+)",
+ "author":"",
+  "dependencies": [
+   "BepInEx-BepInExPack-5.4.2304",
+   "IAmBatby-LethalLevelLoader-1.6.9",
+   "WaterGun-WaterGunLib-1.5.0",
+   "WhiteSpike-Moon_Day_Speed_Multiplier_Patcher-1.0.1",
+   "AudioKnight-StarlancerAIFix-3.13.0"
+  ]
+}

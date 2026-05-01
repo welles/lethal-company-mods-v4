@@ -1,0 +1,9 @@
+{
+  "author": "MonesMonesowicz",
+  "name": "Mones_Moons",
+  "version": "0.6.4",
+  "config_files": [
+    "BepInEx/config/LethalLevelLoader.cfg",
+    "BepInEx/config/ScienceBird.UniversalRadar.cfg"
+  ]
+}
