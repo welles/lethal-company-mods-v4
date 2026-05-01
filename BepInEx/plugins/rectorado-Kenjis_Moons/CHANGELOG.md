@@ -1,3 +1,17 @@
+## 1.5.6
+
+##### Taldor
+
+* Lowered the water trigger to better match the water.
+* Removed the pink glow on the water
+
+##### Hollowed
+
+* Now the desaturation is only active outside
+* Lowered the exposure so the lights inside the ship won't feel as blinding
+
+
+
 ## 1.5.5
 
 ##### All Moons
@@ -12,7 +26,7 @@
 
 ##### Thrive
 
-* Fixed a lighting issue when transitioning from day to night. 
+* Fixed a lighting issue when transitioning from day to night.
 
 ##### Row
 
