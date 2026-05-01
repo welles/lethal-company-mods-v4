@@ -29,3 +29,6 @@
 
 # AsyncLoggers
 /BepInEx/LogOutput.sqlite*
+
+# BepInEx_Faster_Load_AssetBundles_Patcher
+/Cache/AssetBundles/

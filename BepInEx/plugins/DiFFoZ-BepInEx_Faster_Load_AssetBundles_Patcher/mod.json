@@ -1,0 +1,8 @@
+{
+  "author": "DiFFoZ",
+  "name": "BepInEx_Faster_Load_AssetBundles_Patcher",
+  "version": "1.0.1",
+  "config_files": [
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
