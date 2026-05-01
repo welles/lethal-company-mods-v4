@@ -1,0 +1,8 @@
+{
+  "author": "WaterGun",
+  "name": "WaterGunLib",
+  "version": "1.5.0",
+  "config_files": [
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
