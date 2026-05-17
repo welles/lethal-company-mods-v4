@@ -1,0 +1,9 @@
+{
+  "author": "EliteMasterEric",
+  "name": "Coroner",
+  "version": "2.4.1",
+  "config_files": [
+    "BepInEx/config/com.elitemastereric.coroner.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
