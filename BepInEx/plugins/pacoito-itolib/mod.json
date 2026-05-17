@@ -1,0 +1,8 @@
+{
+  "author": "pacoito",
+  "name": "itolib",
+  "version": "0.9.3",
+  "config_files": [
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
