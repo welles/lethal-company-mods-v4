@@ -1,0 +1,9 @@
+{
+  "author": "NutNutty",
+  "name": "SellTracker",
+  "version": "1.2.1",
+  "config_files": [
+    "BepInEx/config/NutNutty.SellTracker.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
