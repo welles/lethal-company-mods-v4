@@ -1,3 +1,39 @@
+## 1.5.10
+
+##### Allure (Pack only)
+
+* Fixed apparatus disappearing after re-routing / re-opening a savefile
+
+
+
+## 1.5.9
+
+##### Manuland \& Kiln
+
+* Fixed Networked objects not being visible by the clients (No more ghost manuls in the manor)
+
+
+
+## 1.5.8
+
+Shameful README update
+
+## 1.5.7
+
+##### All moons
+
+* Added diffusion profiles to missing moons
+
+##### Thrive
+
+* Reduced filesize
+
+##### Manuland
+
+* Manul rotation engaged
+
+
+
 ## 1.5.6
 
 ##### Taldor

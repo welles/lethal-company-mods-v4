@@ -1,9 +1,15 @@
+![1](https://i.postimg.cc/D0WPDGr9/banner-KM.png)
+
 **Kenji's Moons** is a moon pack that has all my past, present and future moons bundled. In the future progression may be added so stay tuned!<br>
 <br>
 This pack contain a total of **12 moons** as or right now, all of them available from the start with different levels of difficulty and environments.<br>
 
-### Please make sure that you don't have ["Kenjis Moons Taldor Saga"](https://thunderstore.io/c/lethal-company/p/rectorado/Kenjis_Moons_Taldor_Saga/) nor any of the standalone moons when you download this pack!
-### All the moons have a standalone version, you can [check them out and my other mods here!](https://thunderstore.io/c/lethal-company/p/rectorado/)
+If you'd like to support me, check out my ko-fi. https://ko-fi.com/itiskenji.
+
+---
+Please make sure that you don't have ["Kenjis Moons Taldor Saga"](https://thunderstore.io/c/lethal-company/p/rectorado/Kenjis_Moons_Taldor_Saga/) nor any of the standalone moons when you download this pack!<br>
+
+All the moons have a standalone version, you can [check them out and my other mods here!](https://thunderstore.io/c/lethal-company/p/rectorado/)
 
 ---
 
@@ -328,7 +334,7 @@ Hollowed is a 350 cost moon that aims to be a B+ tier moon.
 *"I asked ChatGPT, I asked Grok... well, I asked manule and he looked at me like this."*
 
 25-Manuland is a dangerous amusement park that holds tons of manules and goodies for the visitors that want to look at these stupids. It contains a couple of custom scraps, one of them has 9 variants! Will you collect them all?<br><br>
-Manuland is a 670 cost moon that aims to be a S tier moon, ***but for the festivities it has a reduced price for everyone to visit!***
+Manuland is a 670 cost moon that aims to be a S tier moon.
 
 <details>
 <summary><strong>Moon details</strong></summary>
@@ -437,11 +443,11 @@ Please if you want to contact me with some feedback, bugs or suggestions my disc
 <b>Beaniebe</b>: helped tons, gave me tips, resources and feedback. They also smell fantastic. <br><br>
 <b>GenericGMD</b>: they also helped a lot, provided multiple assets and endured my constant pester.<br><br>
 <b>s1ckboy</b>: showed me the wonders of JLL. <br><br>
-<b>Wesley</b>: gave me a few tips and helped with animation and probuilder stuff. <br><br>
-<b>ScaNdal</b>: for providing fantastic vehicles. <br><br>
-<b>sniper1.1</b>: they helped me optimize and get shit done! <br><br>
-<b>Robi, xuxiaolan</b>: they helped me with navmesh related stuffs! <br><br>
-<b>mborsh</b>: Provided the recreation of the vanilla plant shader <br><br>
+<b>Wesley</b>: gave me a few tips, assets and helped with animation, triggers and probuilder stuff. <br><br>
+<b>ScaNdal</b>: providing fantastic vehicles. <br><br>
+<b>sniper1.1</b>: helped me optimize <br><br>
+<b>Robi, xuxiaolan</b>: helped me with navmesh related stuff <br><br>
+<b>mborsh</b>: provided the recreation of the vanilla plant shader <br><br>
 <b>Jacob</b>: Creating JLL <br><br>
 <b>IamBatby</b>: Creating LLL <br><br><br>
 <a href="https://ko-fi.com/itiskenji"><img src="https://storage.ko-fi.com/cdn/brandasset/v2/support_me_on_kofi_dark.png" alt="Ko-Fi" width="200"/></a>
