@@ -1,3 +1,9 @@
+# 1.8.5
+- Gray Apartments updated to v1.6.3
+
+# 1.8.4
+- Spelunkers Caverns updated to v1.2.3
+
 # 1.8.3
 - Subsystems updated to v1.6.1
 
