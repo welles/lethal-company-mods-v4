@@ -1,3 +1,6 @@
+# 2.3.16
++ Fixed potential edge cases for a few issues.
+
 # 2.3.15
 + Fixed bug in latest update breaking the emote camera.
 + Fixed bug while closing the settings in game while emoting causing errors.

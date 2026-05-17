@@ -1,6 +1,6 @@
 {
     "name": "TooManyEmotes",
-    "version_number": "2.3.15",
+    "version_number": "2.3.16",
     "website_url": "https://github.com/cmooref17/Lethal-Company-TooManyEmotes",
     "description": "Adds over 300 new emotes! Includes emote wheel, allows Masked Enemies to emote, adds emote music (can be muted), implements a system for purchasing emotes on the store (optional), and much more!",
     "dependencies": [

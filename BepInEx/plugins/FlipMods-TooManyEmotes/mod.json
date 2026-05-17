@@ -1,8 +1,9 @@
 {
   "author": "FlipMods",
   "name": "TooManyEmotes",
-  "version": "2.3.15",
+  "version": "2.3.16",
   "config_files": [
-    "BepInEx/config/FlipMods.TooManyEmotes.cfg"
+    "BepInEx/config/FlipMods.TooManyEmotes.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
   ]
 }
