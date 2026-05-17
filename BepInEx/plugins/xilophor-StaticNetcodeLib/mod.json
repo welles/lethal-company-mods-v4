@@ -1,0 +1,8 @@
+{
+  "author": "xilophor",
+  "name": "StaticNetcodeLib",
+  "version": "1.2.0",
+  "config_files": [
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
