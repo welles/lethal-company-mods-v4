@@ -2,10 +2,10 @@
   "namespace": "loaforc",
   "name": "FacilityMeltdown",
   "description": "Maybe taking the apparatus out isn't such a great idea...",
-  "version_number": "2.7.4",
+  "version_number": "2.7.5",
   "dependencies": [
     "BepInEx-BepInExPack-5.4.2100",
-    "TeamXiaolan-DawnLib-0.9.9"
+    "TeamXiaolan-DawnLib-0.9.21"
   ],
   "website_url": "https://github.com/LoafOrc/FacilityMeltdown",
   "FullName": "loaforc-FacilityMeltdown"

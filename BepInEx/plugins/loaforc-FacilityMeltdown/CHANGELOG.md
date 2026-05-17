@@ -17,3 +17,6 @@
 
 ### v2.7.4
 - updated to v80. v73 isn't real
+
+### v2.7.5
+- potential fix for the error on some enemies when meltdown starts
