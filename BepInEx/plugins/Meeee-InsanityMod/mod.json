@@ -1,0 +1,10 @@
+{
+  "author": "Meeee",
+  "name": "InsanityMod",
+  "version": "1.0.5",
+  "config_files": [
+    "BepInEx/config/com.insanitymod.lethalcompany.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg",
+    "BepInEx/config/mrov.WeatherRegistry.cfg"
+  ]
+}
