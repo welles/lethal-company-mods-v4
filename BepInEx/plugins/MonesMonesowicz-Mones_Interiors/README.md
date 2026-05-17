@@ -21,10 +21,25 @@
 <img src="https://imgur.com/W6xXkjH.png" alt="Preview">
 <img src="https://imgur.com/r2drrCZ.png" alt="Preview">
 
+# Abandoned Factory
+<img src="https://imgur.com/tlpYJNR.png" alt="Preview">
+<img src="https://imgur.com/y9tysKm.png" alt="Preview">
+<img src="https://imgur.com/61tjbjd.png" alt="Preview">
+
+# UnderWater Mines
+<img src="https://imgur.com/pKiAFa9.png" alt="Preview">
+<img src="https://imgur.com/NjYFp5F.png" alt="Preview">
+<img src="https://imgur.com/MS0Ks6p.png" alt="Preview">
+
+# Abandoned Cinema
+<img src="https://imgur.com/qCTd0qG.png" alt="Preview">
+<img src="https://imgur.com/ijdss9q.png" alt="Preview">
+<img src="https://imgur.com/kU2j6Im.png" alt="Preview">
+
 # <img src="https://i.imgur.com/MHX7bjW.webp?maxwidth=760&fidelity=grand" alt="Preview">
 #### ▸ 🧩 Main creator & Description : [**MonesMonesowicz**](https://thunderstore.io/c/lethal-company/p/MonesMonesowicz/)
 #### ▸ 📷 Icon: [**MonesMonesowicz**](https://thunderstore.io/c/lethal-company/p/MonesMonesowicz/)
 #### ▸ 🦺 Testers: [**MonesMonesowicz**](https://thunderstore.io/c/lethal-company/p/MonesMonesowicz/)
 #### ▸ 🛠️ Scripts: [**WaterGun**](https://thunderstore.io/c/lethal-company/p/WaterGun/)
 #### ▸ 🛎️ Musics/Sounds: Duhi , Dapper Husky
-#### ▸ 🛠️ Some Models: kribleboi22
+#### ▸ 🛠️ Some Models: kribleboi22 , [**Zehs**](https://thunderstore.io/c/lethal-company/p/Zehs/)

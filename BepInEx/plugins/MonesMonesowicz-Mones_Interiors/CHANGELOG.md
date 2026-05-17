@@ -1,3 +1,73 @@
+**<details><summary>Version 0.6.9</summary>**
+# Underwater Mines
+- some mesh colliders fixed
+</details>
+
+**<details><summary>Version 0.6.8</summary>**
+- New interior added "Abandoned Cinema"
+</details>
+
+**<details><summary>Version 0.6.7</summary>**
+- Bugs fixed
+</details>
+
+**<details><summary>Version 0.6.6</summary>**
+# UnderWater Mines
+- Updated to v81
+</details>
+
+**<details><summary>Version 0.6.5</summary>**
+# Basement
+- Fixed water trigger
+</details>
+
+**<details><summary>Version 0.6.4</summary>**
+# Endless Hall
+- No Clip room is not always good so just like with the elevator, you don't know whether you'll survive in it or not
+- More scraps spawn in NoClip Room
+- Less scrap in the Board Room 
+
+# Basement
+- The interior is more claustrophobic 
+- Better Lights
+- When the gate closes it can kill you if you stand under it
+- More obstacles
+- New tiles
+
+# Haunted Hotel
+- The entrance door model has been changed (Ty Zehs)
+- Fixed a few small invisible bugs 
+- Removed some mesh colliders
+</details>
+
+**<details><summary>Version 0.6.3</summary>**
+# Endless Hall
+- Fixed interior generation
+- The Fake Elevator on the radar changes color from green to red every now and then
+</details>
+
+**<details><summary>Version 0.6.2</summary>**
+# Endless Hall
+- New 4 tiles 
+- Reduced lags (Added LOD,doors don't always spawn)
+
+# Abandoned Factory
+- New 3 variants of the buried rooms
+</details>
+
+**<details><summary>Version 0.6.1</summary>**
+- Reworked old interior for v81 "Abandoned Factory"
+</details>
+
+**<details><summary>Version 0.6.0</summary>**
+# Haunted Attic
+- New, refreshed, more scary monster in the chase room and now you can see how close it is
+- New music in chase room
+- Chase rooms is easier a little
+- More chance for chase room (I hope)
+- Bugs fixed
+</details>
+
 **<details><summary>Version 0.5.9</summary>**
 # Haunted Hotel
 - More fire exits locations
