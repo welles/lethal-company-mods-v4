@@ -1,0 +1,16 @@
+{
+  "author": "super_fucking_cool_and_badass_team",
+  "name": "Biodiversity",
+  "version": "0.2.9",
+  "config_files": [
+    "BepInEx/config/com.github.biodiversitylc.Biodiversity.cfg",
+    "BepInEx/config/me.biodiversity.aloe.cfg",
+    "BepInEx/config/me.biodiversity.boombird.cfg",
+    "BepInEx/config/me.biodiversity.coilcrab.cfg",
+    "BepInEx/config/me.biodiversity.critters.cfg",
+    "BepInEx/config/me.biodiversity.developer_scrap_items.cfg",
+    "BepInEx/config/me.biodiversity.junk_radar.cfg",
+    "BepInEx/config/me.biodiversity.ogopogo.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
