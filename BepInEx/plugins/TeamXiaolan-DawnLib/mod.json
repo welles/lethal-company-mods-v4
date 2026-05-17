@@ -1,7 +1,7 @@
 {
   "author": "TeamXiaolan",
   "name": "DawnLib",
-  "version": "0.9.12",
+  "version": "0.9.21",
   "config_files": [
     "BepInEx/config/com.github.teamxiaolan.dawnlib.cfg"
   ]
