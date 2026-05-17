@@ -1,0 +1,8 @@
+{
+  "author": "VirusTLNR",
+  "name": "MaskedInvisFix",
+  "version": "0.0.3",
+  "config_files": [
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
