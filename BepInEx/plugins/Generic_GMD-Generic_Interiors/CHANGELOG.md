@@ -1,3 +1,26 @@
+**4.2.0**
+
+
+
+Overall
+
+* Increased the filesize because I'm a moron
+
+
+
+Storehouse
+
+* Readded the Hi door. Off by default, enable it in configs to see it in game
+* Fixed some minor z fighting
+
+
+
+Bunker
+
+* Rebalanced the single barrel shotgun's price
+
+
+
 **4.1.2 (Patch of shame but also look hey 2 new tiles)**
 
 
