@@ -1,6 +1,36 @@
+# v2.4.8
+#### Added
+- **Deadline auto-reroute:**
+  - Added configurable destinations for automatic reroute on deadline.
+    - Comma-separated List of moon names.
+    - Evaluated in reverse order i.e., the last moon has the highest priority.
+- **LethalConstellations compatibility:**
+  - Added a config option to limit deadline auto-reroute to the current constellation.
+    
+#### Changed
+- **Discovery Mode:**
+  - Reroute checks now happen after new day and new quota rewards are granted.
+  - This way it accounts for newly discovered moons or discounts before deciding whether the ship needs to move.
+- **Deadline auto-reroute:**
+  - Replaced the old `Prefer Galetry over Gordion` setting with the more flexible `Auto reroute destinations` setting. 
+- **LethalConstellations compatibility:**
+  - Maybe fixed an issue with moon visibility in constellations.
+
+#### Fixed
+- Fixed a possible NullReferenceException when saving or resetting the game.
+- **LethalConstellations compatibility:**
+  - Fixed starting constellations config not applying correctly when a constellation whitelist is used.
+    
+# v2.4.7
+#### Added
+- **LethalConstellations compatibility:**
+  - LMU now manually checks for duplicated constellations and removes them.
+  - Resolves an issue reintroduced by the fix in the previous version. 
+
 # v2.4.6
 #### Fixed
-- Fixed an issue where the constellations compatibility would break after the game resets on getting fired.
+- **LethalConstellations compatibility:**
+  - Fixed an issue where the constellations compatibility would break after the game resets on getting fired.
 
 # v2.4.5
 #### Fixed
@@ -13,32 +43,53 @@
 > Check your config if you had this set to _not_ reset when getting fired. More info below.
 
 #### Added
-- Added alert queue exceptions
-  - Prevents some mods that spam alerts (Imperium, LethalCasino) from congesting the queue
-  - Exception list in config. Add mods by GUID. (You can probably ignore this.)
+- **Alert queue:**
+  - Added alert queue exceptions
+  - Exception list in config. Add mods by GUID.
+  - By default, LethalCasino and Imperium are excluded. 
+ 
+> <details>
+> <summary><strong>What is this?</strong></summary>
+> 
+> Alert queueing was added in v2.0.0.  
+> 
+> By default, when any mod uses the game's builtin yellowish or red alert messages on the right side of the screen 
+> to display an alert, it will display immediately, overriding any other alerts that are currently being displayed.
+> 
+> This meant with certain other mods installed, they would block each other's alerts.
+> That's why LMU queues them up and displays them one by one.  
+> Now, some mods can send alerts very frequently. This can be a problem.
+> 
+> With exceptions mods that occasionally spam alerts can be excluded from the queue, so testing something in Imperium
+> or your fried playing three bandits and roulette at once in the casino doesn't congest the queue and end up still 
+> showing you alerts minutes later.
+> </details>
 
 #### Changed
-
-- `Reset when fired` now has three modes:
-  - **All**: wipes all LMU progression. Default.
-  - **AllButStoryProgression**: wipes all LMU progression except unlocked story locks. When story lock behavior is set to 'ImmediateDiscovery' moons will be discovered after reset.
-  - **Nothing**: keeps LMU progression (per save). 
-- LMU now follows the same saving logic as the base game to prevent inconsistencies after crashes or savescumming.
-  - When the game is quit mid-round, the state will load back to what it was at the start of that day.
-  - All progression made from routing the ship after the day had started will be lost.
-  - This aligns with the base game's logic that puts you back on the moon you finished the previous day on.
-- The Band-Aid config setting to save and restore group Credits was changed:
-  - when enabled LMU will also save when the game is quit mid-round.
-  - use it when another mod is saving and restoring the current level. LLL was doing this in the past. I honestly don't know if it's still a thing.
-  - it keeps its name because theoretically it solves the same inconsistencies, so this update doesn't break it for people who need it in their setups and are using it.
+- **Reset when fired:**
+  - `Reset when fired` now has three modes:
+    - **All**: wipes all LMU progression. Default.
+    - **AllButStoryProgression**: wipes all LMU progression except unlocked story locks. When story lock behavior is set to 'ImmediateDiscovery' those moons will be discovered after reset.
+    - **Nothing**: keeps LMU progression (per save). 
+- **Save handling:**
+  - LMU now follows the same saving logic as the base game to prevent inconsistencies after crashes or savescumming.
+    - When the game is quit mid-round, the state will load back to what it was at the start of that day.
+    - All progression made from routing the ship after the day had started will be lost.
+    - This aligns with the base game's logic that puts you back on the moon you finished the previous day on.
+  - The Band-Aid config setting to save and restore group Credits was changed:
+    - when enabled LMU will also save when the game is quit mid-round.
+    - use it when another mod is saving and restoring the current level. LLL was doing this in the past. I honestly don't know if it's still a thing.
+    - it keeps its name because theoretically it solves the same inconsistencies, so this update doesn't break it for people who need it in their setups and are using it.
 
 #### Fixed
-- No longer replacing Dawn's `ProgressivePredicates`.
-  - Should fix an issue preventing Oxyde from being unlocked after using the tablet. 
+- **DawnLib compatibility:**
+  - No longer replacing Dawn's `ProgressivePredicates`.
+  - Should fix an issue preventing Oxyde from CodeRebirth from being unlocked after using the tablet. 
 
 # v2.4.3
 #### Fixed
-- Fixed config file not being created on first time setups. 
+- **Config:**
+  - Fixed config file not being created on first time setups. 
 
 # v2.4.2 
 #### Changed
@@ -51,7 +102,8 @@
 
 # v2.4.1
 #### Fixed
-- Fixed clients buying moons through the TerminalStuff MoonsPlus menu sometimes not registering as paid route.
+- **TerminalStuff compatibility:**
+  - Fixed clients buying moons through the TerminalStuff MoonsPlus menu sometimes not registering as paid route.
 
 # v2.4.0
 > **BREAKING UPDATE!**  
