@@ -1,3 +1,9 @@
+## v1.10.1
+- JLightningRod now uses a custom rpc for triggering lightning strikes fixing a bug when triggering on non stormy weather.
+- JLightningRod has a ton more customization options for lightning's gameplay effects.
+- JLineOfSight has a new event fired when the object was previously viewed by one or more players and is no longer in view of any.
+- EnemySpawner now checks if an enemy requires a nest and will attempt to spawn a nest for an enemy if it is required and attempts to spawn.
+
 ## v1.10.0
 - Fixed JThrowableItem explosions not triggering when on company/timeless moons.
 - InventoryRemover & ItemConsumer now take the vanilla reserved utility slot into account.
