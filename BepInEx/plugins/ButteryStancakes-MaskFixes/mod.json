@@ -1,0 +1,9 @@
+{
+  "author": "ButteryStancakes",
+  "name": "MaskFixes",
+  "version": "1.6.2",
+  "config_files": [
+    "BepInEx/config/butterystancakes.lethalcompany.maskfixes.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
