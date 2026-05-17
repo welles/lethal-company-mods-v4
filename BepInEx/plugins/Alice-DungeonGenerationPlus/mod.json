@@ -1,0 +1,9 @@
+{
+  "author": "Alice",
+  "name": "DungeonGenerationPlus",
+  "version": "1.5.1",
+  "config_files": [
+    "BepInEx/config/dev.ladyalice.dungenplus.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
