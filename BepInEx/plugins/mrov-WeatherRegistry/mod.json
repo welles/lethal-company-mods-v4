@@ -1,0 +1,9 @@
+{
+  "author": "mrov",
+  "name": "WeatherRegistry",
+  "version": "0.8.8",
+  "config_files": [
+    "BepInEx/config/mrov.WeatherRegistry.cfg",
+    "BepInEx/config/AsyncLoggers/LogLevels.cfg"
+  ]
+}
