@@ -1,0 +1,18 @@
+{
+    "name": "Lunar_Lights",
+    "version_number": "1.5.1",
+    "website_url": "https://discord.com/channels/1168655651455639582/1263283058266603644",
+    "description": "V81+ Vanilla Themed Moons, Made by LustrousLuna.",
+    "dependencies": [
+		"Evaisa-LethalLib-1.1.1",
+		"IAmBatby-LethalLevelLoader-1.6.9",
+		"BepInEx-BepInExPack-5.4.2305",
+		"Evaisa-HookGenPatcher-0.0.5",
+		"MaxWasUnavailable-LethalModDataLib-1.2.2",
+		"WhiteSpike-Moon_Day_Speed_Multiplier_Patcher-1.0.1",
+		"AudioKnight-StarlancerAIFix-3.12.0",
+		"pacoito-itolib-0.9.3",
+		"JacobG5-JLL-1.9.10",
+		"Hardy-LCMaxSoundsFix-1.2.0"
+    ]
+}

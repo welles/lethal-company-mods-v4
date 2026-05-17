@@ -1,0 +1,11 @@
+{
+  "author": "LustrousLuna",
+  "name": "Lunar_Lights",
+  "version": "1.5.1",
+  "config_files": [
+    "BepInEx/config/JLL/LunarLights.Rampart.cfg",
+    "BepInEx/config/JLL/LunarLights.Verdance.cfg",
+    "BepInEx/config/LethalLevelLoader.cfg",
+    "BepInEx/config/ScienceBird.UniversalRadar.cfg"
+  ]
+}
